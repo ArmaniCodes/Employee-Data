@@ -34,6 +34,7 @@ def checkIfEmployeeExist(name,empID):
         name = name + " " + empID
     return name
 
+
 def saveToFile(employee_data):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(script_dir, 'employee_data.json')
