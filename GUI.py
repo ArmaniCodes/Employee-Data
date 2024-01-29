@@ -26,8 +26,11 @@ class EmployeeGui:
         button = tb.Button(self.root, text="LOAD EMPLOYEES", command=self.LoadEmployees, bootstyle="light-outline",
                            width=17)
         button.pack(side="bottom", anchor="w")
+
+
+        #command=lambda: newEmployeeWdw(self.root, self.instance) This is a model for the buttons command
         button = tb.Button(self.root, width=17, bootstyle="light-outline", text="NEW EMPLOYEE",
-                           command=lambda: newEmployeeWdw(self.root, self.instance))
+                           )
         button.pack(side="bottom", anchor="w")
 
         #Employee Count Label
