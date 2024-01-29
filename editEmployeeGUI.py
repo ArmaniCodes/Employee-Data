@@ -1,6 +1,7 @@
 from Modules import *
 from manageFile import getEmployeeList
 from manageFile import saveToFile
+from newEmployeeGUI import calculate_age
 
 def save(new_window,entryList,name):
     fname = entryList["FirstName"]
@@ -10,7 +11,10 @@ def save(new_window,entryList,name):
     for k, v in entryList.items():
         entryList[k] = v.get()
 
+
     newList = {name : entryList}
+    #Recalculate Age incase DOB was ammended
+    newList[name]["Age"] = calculate_age(newList[name]["Date Of Birth"])
     saveToFile(newList)
     new_window.destroy()
 
