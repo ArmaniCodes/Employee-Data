@@ -13,4 +13,6 @@ def sortByName():
         sorted_data = dict(sorted(data.items()))
 
 def sortByID():
-    pass
+    data = getEmployeeList()
+    if data:
+        sorted_data = dict(sorted(data.items(), key=lambda x: int(x[1]["Employee ID"])))
