@@ -122,3 +122,10 @@ def employeeInfoWdw(root,name,guiInstance):
     job_entry.insert(0, values["Job Title"])
     job_entry.grid(row=1, column=4, sticky="w", pady=(0, 5))
     entryList["Job Title"] = job_entry
+
+    # Create labels and entry widgets for employee Job Department
+    tb.Label(details_frame2, text="Department:").grid(row=2, column=3, pady=(0, 5), sticky="e")
+    department_entry = tb.Entry(details_frame2, width=15)
+    department_entry.insert(0, values["Department"])
+    department_entry.grid(row=2, column=4, sticky="w", pady=(0, 5))
+    entryList["Department"] = department_entry
