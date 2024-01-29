@@ -24,9 +24,8 @@ class EmployeeGui:
         background_color = self.root.cget("background")
         stylex.configure("Custom.TButton", background=background_color, bordercolor=background_color,
                          lightcolor=background_color, darkcolor=background_color, highlightthickness=0, bd=0)
-        stylex.configure("My.TFrame", background="gray20", borderwidth=2, relief="solid")
-        stylex.configure("Custom.TLabel", background="gray20", bordercolor="gray20",
-                         lightcolor="gray20", darkcolor="gray20", bd=0)
+
+
 
         self.root.mainloop()
 
@@ -62,6 +61,12 @@ class EmployeeGui:
 
     #Frame all about sorting Employee Data
     def createSortingFrame(self):
+        #Style for the frame and label
+        stylex = tb.Style()
+        stylex.configure("My.TFrame", background="gray20", borderwidth=2, relief="solid")
+        stylex.configure("Custom.TLabel", background="gray20", bordercolor="gray20",
+                         lightcolor="gray20", darkcolor="gray20", bd=0)
+
         self.sortingFrame = tb.Frame(self.root, style="My.TFrame", width=150, height=250)
         self.sortingFrame.pack(side="left", anchor="n", padx=20, pady=20)
 
