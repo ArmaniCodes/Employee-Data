@@ -1,6 +1,9 @@
 from Modules import *
 
 
+#Save Data
+def save(new_window,entryList,guiInstance):
+    pass
 
 
 #Create New EmployeeGUI
