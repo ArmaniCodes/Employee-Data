@@ -63,6 +63,10 @@ class EmployeeGui:
     def updateScrollingFrame(self):
         self.inner_frame.update_idletasks()
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
+
+    def updateEmployeeLabel(self,employeeCount):
+        pass
+
     def LoadEmployees(self):
         employees = getEmployeeList()
         if employees:
@@ -82,3 +86,4 @@ class EmployeeGui:
 
                 self.buttonList[i] = b
                 b.pack(fill="x")
+                self.updateScrollingFrame()
