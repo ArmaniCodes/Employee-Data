@@ -40,9 +40,10 @@ def save(new_window,entryList,guiInstance):
     newList = {name: list}
     newList[name]["Age"] = calculate_age(newList[name]["Date Of Birth"])
 
+    #Save, DestroyGui, then add new Employee to employeeFrame
     saveToFile(newList)
     new_window.destroy()
-
+    guiInstance.addEmployeeToFrame(name)
 
 
 #Create New EmployeeGUI

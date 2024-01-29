@@ -59,6 +59,7 @@ class EmployeeGui:
         self.buttonList[name] = b
         self.updateScrollingFrame()
         self.updateEmployeeLabel(self.employeeCount)
+
     def clearEmployees(self):
         #Destroying this clears all it's children AKA employees
         self.inner_frame.destroy()
