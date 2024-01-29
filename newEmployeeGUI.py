@@ -91,3 +91,8 @@ def newEmployeeWdw(root,guiInstance):
     ID_entry = tb.Entry(details_frame, width=17)
     ID_entry.grid(row=10, column=1, sticky="w", pady=(0, 5))
     entryList["Employee ID"] = ID_entry
+
+    #Employment Details Label
+    tb.Label(details_frame2, text="Employment Details", bootstyle="success", font=("Helvetica", 11)).grid(row=0,
+                                                                                                          column=3,
+                                                                                                          pady=10)
