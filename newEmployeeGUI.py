@@ -3,7 +3,11 @@ from Modules import *
 
 #Input validate names
 def cleanNames(phrase):
-    pass
+    newPhrase = ""
+    for i in phrase:
+        if i.isalnum():
+            newPhrase += i
+    return newPhrase
 
 #Save Data
 def save(new_window,entryList,guiInstance):
