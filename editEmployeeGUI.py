@@ -12,7 +12,7 @@ def save(new_window,entryList,name):
 
     newList = {name : entryList}
     saveToFile(newList)
-    rootWindow.destroy()
+    new_window.destroy()
 
 def employeeInfoWdw(root,name,guiInstance):
     #Get the button that stores this individual employee's name
