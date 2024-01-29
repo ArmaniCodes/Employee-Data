@@ -14,13 +14,13 @@ def sortByName(LoadEmployeesMethod):
         LoadEmployeesMethod(sorted_data)
 
 def sortByID(LoadEmployeesMethod):
-    data = getEmployeeList(LoadEmployeesMethod)
+    data = getEmployeeList()
     if data:
         sorted_data = dict(sorted(data.items(), key=lambda x: int(x[1]["Employee ID"])))
         LoadEmployeesMethod(sorted_data)
 
 def sortBySalary(LoadEmployeesFunction):
-    data = getEmployeeList(LoadEmployeesMethod)
+    data = getEmployeeList()
     if data:
         sorted_data = dict(sorted(data.items(), key=lambda x: int(x[1]["Salary"]), reverse=True))
         LoadEmployeesFunction(sorted_data)
