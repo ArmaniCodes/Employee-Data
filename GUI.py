@@ -17,3 +17,7 @@ class EmployeeGui:
 
     def createGui(self):
         frame = tb.Frame(self.root)
+
+        frame.pack(side="left",fill = "y")
+        scrollbar = tb.Scrollbar(frame, orient="vertical")
+        scrollbar.pack(side="right", fill="y")
