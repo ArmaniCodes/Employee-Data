@@ -49,4 +49,4 @@ class EmployeeGui:
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
 
     def LoadEmployees(self):
-        pass
+        employees = getEmployeeList()
