@@ -12,7 +12,8 @@ class EmployeeGui:
 
         #Store instance of GUI for later Use
         self.instance = self
-
+        self.createGui()
+        self.root.mainloop()
 
     def createGui(self):
         frame = tb.Frame(self.root)
