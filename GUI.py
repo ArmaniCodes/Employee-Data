@@ -76,3 +76,4 @@ class EmployeeGui:
                 b = tb.Button(self.inner_frame, width=20, text=i, style="Custom.TButton")
 
                 self.buttonList[i] = b
+                b.pack(fill="x")
