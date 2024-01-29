@@ -33,3 +33,7 @@ class EmployeeGui:
         #Employee Count Label
         self.empCountLabel = tb.Label(self.root, text="Employees: 0", bootstyle="success", width=17)
         self.empCountLabel.pack(side="bottom", anchor="w")
+
+
+    def LoadEmployees(self):
+        pass
