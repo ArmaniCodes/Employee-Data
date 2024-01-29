@@ -25,6 +25,8 @@ class EmployeeGui:
         stylex.configure("Custom.TButton", background=background_color, bordercolor=background_color,
                          lightcolor=background_color, darkcolor=background_color, highlightthickness=0, bd=0)
         stylex.configure("My.TFrame", background="gray20", borderwidth=2, relief="solid")
+        stylex.configure("Custom.TLabel", background="gray20", bordercolor="gray20",
+                         lightcolor="gray20", darkcolor="gray20", bd=0)
 
         self.root.mainloop()
 
