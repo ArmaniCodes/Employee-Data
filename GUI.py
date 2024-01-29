@@ -42,7 +42,10 @@ class EmployeeGui:
         scrollbar.configure(command=self.canvas.yview)
 
     def createEmployeeFrame(self):
-        pass
+        self.inner_frame = tk.Frame(self.canvas)
+        #Creates window
+        self.canvas.create_window((0, 0), window=self.inner_frame, anchor="nw")
+        self.canvas.config(scrollregion=self.canvas.bbox("all"))
 
     def LoadEmployees(self):
         pass
