@@ -10,6 +10,8 @@ class EmployeeGui:
         self.root.resizable(False, False)
         self.root.title("Employee Dashboard")
 
+        self.employeeCount = 0
+
         #Store instance of GUI for later Use
         self.instance = self
         self.createGui()
