@@ -59,3 +59,9 @@ class EmployeeGui:
         employees = getEmployeeList()
         if employees:
             self.clearEmployees() #Clear Previous Employees
+
+            #Button Style that gives transparent appearance
+            stylex = tb.Style()
+            background_color = self.root.cget("background")
+            stylex.configure("Custom.TButton", background=background_color, bordercolor=background_color,
+                             lightcolor=background_color, darkcolor=background_color, highlightthickness=0, bd=0)
