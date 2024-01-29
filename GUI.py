@@ -58,6 +58,10 @@ class EmployeeGui:
         #Create new frame with no employees
         self.createEmployeeFrame()
 
+
+    #Updates frame when new employees Loaded/Deleted
+    def updateScrollingFrame(self):
+        pass
     def LoadEmployees(self):
         employees = getEmployeeList()
         if employees:
