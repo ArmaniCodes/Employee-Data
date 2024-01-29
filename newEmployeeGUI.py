@@ -1,6 +1,10 @@
 from Modules import *
 
 
+#Input validate names
+def cleanNames(phrase):
+    pass
+
 #Save Data
 def save(new_window,entryList,guiInstance):
     #Convert entry to the entries text from v.get()
