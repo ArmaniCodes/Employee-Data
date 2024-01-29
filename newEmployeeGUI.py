@@ -56,3 +56,9 @@ def newEmployeeWdw(root,guiInstance):
     sex_entry = tb.Entry(details_frame, width=15)
     sex_entry.grid(row=4, column=1, sticky="w", pady=(0, 5))
     entryList["Sex"] = sex_entry
+
+    # Create label and entry widget for employee race, then store in entryList
+    tb.Label(details_frame, text="Employee Race:").grid(row=5, column=0, sticky="e", pady=(0, 5))
+    race_entry = tb.Entry(details_frame, width=15)
+    race_entry.grid(row=5, column=1, sticky="w", pady=(0, 5))
+    entryList["Race"] = race_entry
