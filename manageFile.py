@@ -17,3 +17,6 @@ def getEmployeeList():
     else:
         return None
 
+
+def checkIfEmployeeExist(name,employee_data):
+    pass
