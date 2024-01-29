@@ -107,3 +107,9 @@ def newEmployeeWdw(root,guiInstance):
     department_entry = tb.Entry(details_frame2, width=15)
     department_entry.grid(row=2, column=4, sticky="w", pady=(0, 5))
     entryList["Department"] = department_entry
+
+    # Create label and entry widget for employee's Manager/Leader, then store in entryList
+    tb.Label(details_frame2, text="Manager/Leader:").grid(row=3, column=3, pady=(0, 5), sticky="e")
+    manager_entry = tb.Entry(details_frame2, width=15)
+    manager_entry.grid(row=3, column=4, sticky="w", pady=(0, 5))
+    entryList["Manager/Leader"] = manager_entry
