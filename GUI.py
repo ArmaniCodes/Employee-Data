@@ -69,3 +69,6 @@ class EmployeeGui:
                              lightcolor=background_color, darkcolor=background_color, highlightthickness=0, bd=0)
             #Set Employee Count to 0 before counting
             self.employeeCount = 0
+
+            for i in employees:
+                self.employeeCount+=1
