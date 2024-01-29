@@ -11,6 +11,7 @@ class EmployeeGui:
         self.root.title("Employee Dashboard")
 
         self.employeeCount = 0
+        self.buttonList = {}
 
         #Store instance of GUI for later Use
         self.instance = self
