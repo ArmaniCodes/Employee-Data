@@ -39,6 +39,10 @@ class EmployeeGui:
         #Canvas for scroll bar
         self.canvas = tb.Canvas(frame, yscrollcommand=scrollbar.set, width=150, height=300)
         self.canvas.pack(side="left", fill="y")
+        scrollbar.configure(command=self.canvas.yview)
+
+    def createEmployeeFrame(self):
+        pass
 
     def LoadEmployees(self):
         pass
