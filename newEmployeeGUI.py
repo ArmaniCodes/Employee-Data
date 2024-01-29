@@ -3,7 +3,8 @@ from Modules import *
 
 #Save Data
 def save(new_window,entryList,guiInstance):
-    pass
+    for k,v in entryList.items():
+        list[k] = v.get()
 
 
 #Create New EmployeeGUI
