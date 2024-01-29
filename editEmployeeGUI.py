@@ -40,3 +40,8 @@ def employeeInfoWdw(root,name,guiInstance):
 
     details_frame2 = tb.Frame(new_window, width=200)
     details_frame2.pack(side="right", anchor="n", pady=15, padx=10, expand=True, fill="x")
+
+    #Personal information Label
+    tb.Label(details_frame, text="Personal Information", bootstyle="success", font=("Helvetica", 11)).grid(row=0,
+                                                                                                           column=0,
+                                                                                                           pady=10)
