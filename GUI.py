@@ -96,7 +96,7 @@ class EmployeeGui:
             for i in employees:
                 self.employeeCount+=1
                 b = tb.Button(self.inner_frame, width=20, text=i, style="Custom.TButton")
-
+                b.configure(command=lambda t=i, button=b: employeeInfoWdw(self.root, t, self.instance))
                 self.buttonList[i] = b
                 b.pack(fill="x")
             self.updateScrollingFrame()
