@@ -121,7 +121,7 @@ class EmployeeGui:
         employees = getEmployeeList()
         if employees:
             self.clearEmployees() #Clear Previous Employees
-
+            self.buttonList.clear()
             #Set Employee Count to 0 before counting
             self.employeeCount = 0
 
@@ -139,3 +139,9 @@ class EmployeeGui:
     def LoadSortedEmployees(self,employees):
         self.clearEmployees()
         self.buttonList.clear()
+        for i in employees:
+            b = tb.Button(self.inner_frame, width=20, text=i, style="Custom.TButton")
+            b.configure(command=lambda t=i, button=b: employeeInfoWdw(self.root, t, self.instance))
+            self.buttonList[i] = b
+            b.pack(fill="x")
+            self.updateScrollingFrame()
