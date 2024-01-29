@@ -135,3 +135,6 @@ class EmployeeGui:
             self.updateEmployeeLabel(self.employeeCount)
         else:
             self.clearEmployees()
+
+    def LoadSortedEmployees(self,employees):
+        pass
