@@ -3,6 +3,10 @@ from manageFile import getEmployeeList
 
 
 
+def save(new_window,entryList):
+    pass
+
+
 def employeeInfoWdw(root,name,guiInstance):
     #Get the button that stores this individual employee's name
     buttonInstance = guiInstance.buttonList[name]
