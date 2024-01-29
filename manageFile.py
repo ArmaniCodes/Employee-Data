@@ -18,7 +18,7 @@ def getEmployeeList():
         return None
 
 
-def checkIfEmployeeExist(name,employee_data):
+def checkIfEmployeeExist(name,empID):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(script_dir, 'employee_data.json')
 
@@ -31,7 +31,5 @@ def checkIfEmployeeExist(name,employee_data):
 
     #If employee name already exist, we simply add the employee ID to the employees name to create a new Employee
     if name in loaded_employee_data:
-        values = employee_data
-        name = name + " " + employee_data["Employee ID"]
-        employee_data = {name : values}
+        name = name + " " + empID
     return name
