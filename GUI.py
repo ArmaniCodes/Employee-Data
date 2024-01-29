@@ -65,7 +65,7 @@ class EmployeeGui:
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
 
     def updateEmployeeLabel(self,employeeCount):
-        pass
+        self.empCountLabel.configure(text = "Employees: " + str(employeeCount))
 
     def LoadEmployees(self):
         employees = getEmployeeList()
@@ -86,4 +86,5 @@ class EmployeeGui:
 
                 self.buttonList[i] = b
                 b.pack(fill="x")
-                self.updateScrollingFrame()
+            self.updateScrollingFrame()
+            self.updateEmployeeLabel()
