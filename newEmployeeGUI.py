@@ -62,3 +62,9 @@ def newEmployeeWdw(root,guiInstance):
     race_entry = tb.Entry(details_frame, width=15)
     race_entry.grid(row=5, column=1, sticky="w", pady=(0, 5))
     entryList["Race"] = race_entry
+
+    #Contact Information Label
+    tb.Label(details_frame, text="Contact Information", bootstyle="success", font=("Helvetica", 11)).grid(row=6,
+                                                                                                          column=0,
+                                                                                                          sticky="e",
+                                                                                                          pady=10)
