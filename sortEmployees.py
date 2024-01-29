@@ -12,7 +12,8 @@ def sortByName(LoadEmployeesMethod):
     if data:
         sorted_data = dict(sorted(data.items()))
         LoadEmployeesMethod(sorted_data)
-def sortByID():
+
+def sortByID(LoadEmployeesMethod):
     data = getEmployeeList(LoadEmployeesMethod)
     if data:
         sorted_data = dict(sorted(data.items(), key=lambda x: int(x[1]["Employee ID"])))
