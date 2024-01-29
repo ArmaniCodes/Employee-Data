@@ -21,3 +21,11 @@ class EmployeeGui:
         frame.pack(side="left",fill = "y")
         scrollbar = tb.Scrollbar(frame, orient="vertical")
         scrollbar.pack(side="right", fill="y")
+
+        #Setup buttons
+        button = tb.Button(self.root, text="LOAD EMPLOYEES", command=self.LoadEmployees, bootstyle="light-outline",
+                           width=17)
+        button.pack(side="bottom", anchor="w")
+        button = tb.Button(self.root, width=17, bootstyle="light-outline", text="NEW EMPLOYEE",
+                           command=lambda: newEmployeeWdw(self.root, self.instance))
+        button.pack(side="bottom", anchor="w")
