@@ -27,7 +27,6 @@ class EmployeeGui:
                            width=17)
         button.pack(side="bottom", anchor="w")
 
-
         #command=lambda: newEmployeeWdw(self.root, self.instance) This is a model for the buttons command
         button = tb.Button(self.root, width=17, bootstyle="light-outline", text="NEW EMPLOYEE",
                            )
@@ -37,6 +36,9 @@ class EmployeeGui:
         self.empCountLabel = tb.Label(self.root, text="Employees: 0", bootstyle="success", width=17)
         self.empCountLabel.pack(side="bottom", anchor="w")
 
+        #Canvas for scroll bar
+        self.canvas = tb.Canvas(frame, yscrollcommand=scrollbar.set, width=150, height=300)
+        self.canvas.pack(side="left", fill="y")
 
     def LoadEmployees(self):
         pass
