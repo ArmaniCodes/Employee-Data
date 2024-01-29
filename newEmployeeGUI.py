@@ -1,5 +1,5 @@
 from Modules import *
-
+from manageFile import checkIfEmployeeExist
 
 #Input validate names
 def cleanNames(phrase):
