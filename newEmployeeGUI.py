@@ -3,10 +3,14 @@ from Modules import *
 
 #Save Data
 def save(new_window,entryList,guiInstance):
+    #Convert entry to the entries text from v.get()
     for k,v in entryList.items():
         list[k] = v.get()
+
     fname = list["FirstName"]
     lname = list["LastName"]
+    del list["FirstName"]
+    del list["LastName"]
 
 #Create New EmployeeGUI
 def newEmployeeWdw(root,guiInstance):
