@@ -15,8 +15,9 @@ def save(new_window,entryList,guiInstance):
     for k,v in entryList.items():
         list[k] = v.get()
 
-    fname = list["FirstName"]
-    lname = list["LastName"]
+    #Clean names from whitespaces and non alpha()
+    fname = cleanNames( list["FirstName"] )
+    lname = cleanNames(list["LastName"] )
     del list["FirstName"]
     del list["LastName"]
 
