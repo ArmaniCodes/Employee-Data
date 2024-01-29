@@ -54,6 +54,11 @@ class EmployeeGui:
         scrollbar.configure(command=self.canvas.yview)
         self.createEmployeeFrame()
 
+    #Frame all about sorting Employee Data
+    def createSortingFrame(self):
+        pass
+
+
     def createEmployeeFrame(self):
         self.inner_frame = tk.Frame(self.canvas)
         #Creates window
