@@ -150,3 +150,15 @@ def employeeInfoWdw(root,name,guiInstance):
     salary_entry.insert(0, values["Salary"])
     salary_entry.grid(row=5, column=4, sticky="w", pady=(0, 5))
     entryList["Salary"] = salary_entry
+
+    #Performance & Development Label
+    tb.Label(details_frame2, text="Performance & Development", bootstyle="success", font=("Helvetica", 11)).grid(row=6,
+                                                                                                                 column=3,
+                                                                                                                 columnspan=2,
+                                                                                                                 pady=10)
+    # Create labels and entry widgets for employee Attendance
+    tb.Label(details_frame2, text="Time and Attendance:").grid(row=7, column=3, pady=(0, 5), sticky="e")
+    time_entry = tb.Entry(details_frame2, width=15)
+    time_entry.insert(0, values["Time and Attendance"])
+    time_entry.grid(row=7, column=4, sticky="w", pady=(0, 5))
+    entryList["Time and Attendance"] = time_entry
