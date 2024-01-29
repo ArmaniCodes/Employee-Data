@@ -21,23 +21,23 @@ def cleanNames(phrase):
 def save(new_window,entryList,guiInstance):
     #Convert entry to the entries text from v.get()
     for k,v in entryList.items():
-        list[k] = v.get()
+        entryList[k] = v.get()
 
     #Clean names from whitespaces and non alpha()
-    fname = cleanNames( list["FirstName"] )
-    lname = cleanNames(list["LastName"] )
-    del list["FirstName"]
-    del list["LastName"]
+    fname = cleanNames( entryList["FirstName"] )
+    lname = cleanNames(entryList["LastName"] )
+    del entryList["FirstName"]
+    del entryList["LastName"]
 
     #If names are empty we instantly return
     if fname == '' or lname == '':
         rootWindow.destroy()
         return
     #Validate Name
-    name =  checkIfEmployeeExist( (fname + " " + lname), list["Employee ID"])
+    name =  checkIfEmployeeExist( (fname + " " + lname), entryList["Employee ID"])
 
     #Create new list and calculate Age
-    newList = {name: list}
+    newList = {name: entryList}
     newList[name]["Age"] = calculate_age(newList[name]["Date Of Birth"])
 
     #Save, DestroyGui, then add new Employee to employeeFrame
