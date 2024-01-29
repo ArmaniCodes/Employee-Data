@@ -1,6 +1,8 @@
 from Modules import *
 from manageFile import getEmployeeList
 from newEmployeeGUI import newEmployeeWdw
+from editEmployeeGUI import employeeInfoWdw
+
 class EmployeeGui:
     def __init__(self):
         #Dark Theme
@@ -62,6 +64,7 @@ class EmployeeGui:
     def addEmployeeToFrame(self,name):
         self.employeeCount += 1
         b = tb.Button(self.inner_frame, width=20, text=name, style="Custom.TButton")
+        b.configure(command=lambda t=name, button=b: employeeInfoWdw(self.root, t, self.instance))
         b.pack(fill="x")
         self.buttonList[name] = b
         self.updateScrollingFrame()
