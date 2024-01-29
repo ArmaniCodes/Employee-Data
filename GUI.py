@@ -61,7 +61,8 @@ class EmployeeGui:
 
     #Updates frame when new employees Loaded/Deleted
     def updateScrollingFrame(self):
-        pass
+        self.inner_frame.update_idletasks()
+        self.canvas.config(scrollregion=self.canvas.bbox("all"))
     def LoadEmployees(self):
         employees = getEmployeeList()
         if employees:
