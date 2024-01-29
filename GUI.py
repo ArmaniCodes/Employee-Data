@@ -55,7 +55,10 @@ class EmployeeGui:
         self.canvas = tb.Canvas(frame, yscrollcommand=scrollbar.set, width=150, height=300)
         self.canvas.pack(side="left", fill="y")
         scrollbar.configure(command=self.canvas.yview)
+
+        #Create employeeFrame then sortingFrame
         self.createEmployeeFrame()
+        self.createSortingFrame()
 
     #Frame all about sorting Employee Data
     def createSortingFrame(self):
