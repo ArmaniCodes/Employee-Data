@@ -25,7 +25,9 @@ def save(new_window,entryList,guiInstance):
     if fname == '' or lname == '':
         rootWindow.destroy()
         return
+    #Validate Name
     name =  checkIfEmployeeExist( (fname + " " + lname), list["Employee ID"])
+    newList = {name: list}
 
 #Create New EmployeeGUI
 def newEmployeeWdw(root,guiInstance):
