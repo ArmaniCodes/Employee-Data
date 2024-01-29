@@ -3,4 +3,5 @@ from modules import json
 
 
 def getEmployeeList():
-    pass
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, 'employee_data.json')
