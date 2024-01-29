@@ -137,4 +137,5 @@ class EmployeeGui:
             self.clearEmployees()
 
     def LoadSortedEmployees(self,employees):
-        pass
+        self.clearEmployees()
+        self.buttonList.clear()
