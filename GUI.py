@@ -58,4 +58,4 @@ class EmployeeGui:
     def LoadEmployees(self):
         employees = getEmployeeList()
         if employees:
-            pass
+            self.clearEmployees() #Clear Previous Employees
