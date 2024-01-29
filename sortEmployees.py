@@ -11,3 +11,6 @@ def sortByName():
     data = getEmployeeList()
     if data:
         sorted_data = dict(sorted(data.items()))
+
+def sortByID():
+    pass
