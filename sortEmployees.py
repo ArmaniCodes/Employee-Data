@@ -11,12 +11,12 @@ def sortByName(LoadEmployeesMethod):
     data = getEmployeeList()
     if data:
         sorted_data = dict(sorted(data.items()))
-
+        LoadEmployeesMethod(sorted_data)
 def sortByID():
     data = getEmployeeList(LoadEmployeesMethod)
     if data:
         sorted_data = dict(sorted(data.items(), key=lambda x: int(x[1]["Employee ID"])))
-
+        LoadEmployeesMethod(sorted_data)
 
 def sortBySalary(LoadEmployeesFunction):
     data = getEmployeeList(LoadEmployeesMethod)
