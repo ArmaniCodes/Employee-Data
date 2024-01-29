@@ -1,6 +1,6 @@
 from Modules import *
 from manageFile import getEmployeeList
-
+from newEmployeeGUI import newEmployeeWdw
 class EmployeeGui:
     def __init__(self):
         #Dark Theme
@@ -30,9 +30,9 @@ class EmployeeGui:
                            width=17)
         button.pack(side="bottom", anchor="w")
 
-        #command=lambda: newEmployeeWdw(self.root, self.instance) This is a model for the buttons command
+
         button = tb.Button(self.root, width=17, bootstyle="light-outline", text="NEW EMPLOYEE",
-                           )
+                           command=lambda: newEmployeeWdw(self.root, self.instance)         )
         button.pack(side="bottom", anchor="w")
 
         #Employee Count Label
