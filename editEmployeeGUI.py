@@ -27,7 +27,16 @@ def employeeInfoWdw(root,name,guiInstance):
 
     #Stores employee info
     entryList = {}
+
+    #Check if list exist, it should be impossible for it to not exist if execution reaches here
     LIST = getEmployeeList()
-    if list is None or name not in list:
+    if LIST is None or name not in LIST:
         raise Exception("Error, Invalid Employee List or Employee does not Exist!")
-    values = list[name]
+    values = LIST[name]
+
+    #Frames to hold widgets
+    details_frame = tb.Frame(new_window, width=0)
+    details_frame.pack(side="left", anchor="n", pady=15, padx=10)
+
+    details_frame2 = tb.Frame(new_window, width=200)
+    details_frame2.pack(side="right", anchor="n", pady=15, padx=10, expand=True, fill="x")
