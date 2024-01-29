@@ -45,3 +45,9 @@ def employeeInfoWdw(root,name,guiInstance):
     tb.Label(details_frame, text="Personal Information", bootstyle="success", font=("Helvetica", 11)).grid(row=0,
                                                                                                            column=0,
                                                                                                            pady=10)
+
+    # Create labels and entry widgets for employee first Name
+    tb.Label(details_frame, text="Employee First Name:").grid(row=1, column=0, sticky="e", pady=(0, 5))
+    name_entry = tb.Label(details_frame, width=15, text=name.split()[0])
+    name_entry.grid(row=1, column=1, sticky="w", pady=(0, 5))
+    entryList["FirstName"] = name.split()[0]
