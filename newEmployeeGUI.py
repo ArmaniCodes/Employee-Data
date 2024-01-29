@@ -1,5 +1,9 @@
 from Modules import *
 from manageFile import checkIfEmployeeExist
+from datetime import datetime
+
+def calculate_age(birthdate):
+    pass
 
 #Input validate names
 def cleanNames(phrase):
