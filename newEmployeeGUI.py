@@ -3,7 +3,10 @@ from manageFile import checkIfEmployeeExist
 from datetime import datetime
 
 def calculate_age(birthdate):
-    pass
+    today = datetime.today()
+    birthdate = datetime.strptime(birthdate, '%m/%d/%Y')
+    age = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
+    return age
 
 #Input validate names
 def cleanNames(phrase):
