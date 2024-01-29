@@ -19,4 +19,7 @@ def sortByID():
 
 
 def sortBySalary(LoadEmployeesFunction):
-    pass
+    data = getEmployeeList()
+    if data:
+        sorted_data = dict(sorted(data.items(), key=lambda x: int(x[1]["Salary"]), reverse=True))
+        LoadEmployeesFunction(sorted_data)
