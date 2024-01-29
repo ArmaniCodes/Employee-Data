@@ -53,7 +53,8 @@ class EmployeeGui:
 
     #Adds new employee to Frame and updates scrollingFrame
     def addEmployeeToFrame(self,name):
-        pass
+        self.employeeCount += 1
+        b = tb.Button(self.inner_frame, width=20, text=name, style="Custom.TButton")
 
     def clearEmployees(self):
         #Destroying this clears all it's children AKA employees
