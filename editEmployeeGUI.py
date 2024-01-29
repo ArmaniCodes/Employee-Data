@@ -1,11 +1,18 @@
 from modules import *
 from manageFile import getEmployeeList
+from manageFile import saveToFile
 
+def save(new_window,entryList,name):
+    fname = entryList["FirstName"]
+    lname = entryList["LastName"]
+    del entryList["FirstName"]
+    del entryList["LastName"]
+    for k, v in entryList.items():
+        entryList[k] = v.get()
 
-
-def save(new_window,entryList):
-    pass
-
+    newList = {name : entryList}
+    saveToFile(newList)
+    rootWindow.destroy()
 
 def employeeInfoWdw(root,name,guiInstance):
     #Get the button that stores this individual employee's name
@@ -21,7 +28,7 @@ def employeeInfoWdw(root,name,guiInstance):
     label = tb.Label(new_window, text=name + "'s info, override if necessary ", font=("Helvetica", 13)).pack(pady=5)
 
     #Save Button
-    close_button = tb.Button(new_window, text="Save/Close", command=lambda: save(new_window, entryList),
+    close_button = tb.Button(new_window, text="Save/Close", command=lambda: save(new_window, entryList,name),
                              bootstyle="success,outline")
     close_button.pack(side="bottom")
 
