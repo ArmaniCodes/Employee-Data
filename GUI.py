@@ -51,6 +51,9 @@ class EmployeeGui:
         self.canvas.create_window((0, 0), window=self.inner_frame, anchor="nw")
         self.canvas.config(scrollregion=self.canvas.bbox("all"))
 
+    #Adds new employee to Frame and updates scrollingFrame
+    def addEmployeeToFrame(self,name):
+        pass
 
     def clearEmployees(self):
         #Destroying this clears all it's children AKA employees
