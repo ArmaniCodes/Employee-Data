@@ -96,3 +96,8 @@ def newEmployeeWdw(root,guiInstance):
     tb.Label(details_frame2, text="Employment Details", bootstyle="success", font=("Helvetica", 11)).grid(row=0,
                                                                                                           column=3,
                                                                                                           pady=10)
+    # Create label and entry widget for employee's Job Title, then store in entryList
+    tb.Label(details_frame2, text="Job Title:").grid(row=1, column=3, pady=(0, 5), sticky="e")
+    job_entry = tb.Entry(details_frame2, width=15)
+    job_entry.grid(row=1, column=4, sticky="w", pady=(0, 5))
+    entryList["Job Title"] = job_entry
