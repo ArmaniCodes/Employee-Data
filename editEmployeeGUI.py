@@ -136,3 +136,10 @@ def employeeInfoWdw(root,name,guiInstance):
     manager_entry.insert(0, values["Manager/Leader"])
     manager_entry.grid(row=3, column=4, sticky="w", pady=(0, 5))
     entryList["Manager/Leader"] = manager_entry
+
+    # Create labels and entry widgets for employee Job Status
+    tb.Label(details_frame2, text="Employment Status:").grid(row=4, column=3, pady=(0, 5), sticky="e")
+    status_entry = tb.Entry(details_frame2, width=15)
+    status_entry.insert(0, values["Status"])
+    status_entry.grid(row=4, column=4, sticky="w", pady=(0, 5))
+    entryList["Status"] = status_entry
