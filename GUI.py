@@ -8,3 +8,4 @@ class EmployeeGui:
         #Window Size
         self.root.geometry("1150x500")
         self.root.resizable(False, False)
+        self.root.title("Employee Dashboard")
