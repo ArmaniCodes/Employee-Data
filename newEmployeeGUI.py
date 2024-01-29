@@ -73,3 +73,9 @@ def newEmployeeWdw(root,guiInstance):
     email_entry = tb.Entry(details_frame, width=17)
     email_entry.grid(row=7, column=1, sticky="w", pady=(0, 5))
     entryList["Email"] = email_entry
+
+    # Create label and entry widget for employee's phone, then store in entryList
+    tb.Label(details_frame, text="Employee Phone:").grid(row=8, column=0, sticky="e", pady=(0, 5))
+    phone_entry = tb.Entry(details_frame, width=17)
+    phone_entry.grid(row=8, column=1, sticky="w", pady=(0, 5))
+    entryList["Phone"] = phone_entry
