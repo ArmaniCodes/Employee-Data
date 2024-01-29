@@ -33,3 +33,6 @@ def checkIfEmployeeExist(name,empID):
     if name in loaded_employee_data:
         name = name + " " + empID
     return name
+
+def saveToFile(employee_data):
+    pass
