@@ -8,4 +8,6 @@ def searchForEmployee(root,guiInstance,name):
         employeeInfoWdw(root,name,guiInstance)
 
 def sortByName():
-    pass
+    data = getEmployeeList()
+    if data:
+        sorted_data = dict(sorted(data.items()))
