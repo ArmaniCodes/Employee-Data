@@ -44,3 +44,9 @@ def newEmployeeWdw(root,guiInstance):
     last_name_entry = tb.Entry(details_frame, width=15)
     last_name_entry.grid(row=2, column=1, sticky="w", pady=(0, 5))
     entryList["LastName"] = last_name_entry
+
+    # Create label and entry widget for employee DOB, then store in entryList
+    tb.Label(details_frame, text="Employee Date of Birth:").grid(row=3, column=0, sticky="e", pady=(0, 5))
+    dob_entry = tb.Entry(details_frame, width=15)
+    dob_entry.grid(row=3, column=1, sticky="w", pady=(0, 5))
+    entryList["Date Of Birth"] = dob_entry
