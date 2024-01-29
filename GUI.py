@@ -50,3 +50,5 @@ class EmployeeGui:
 
     def LoadEmployees(self):
         employees = getEmployeeList()
+        if employees:
+            pass
