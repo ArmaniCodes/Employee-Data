@@ -2,6 +2,7 @@ from Modules import *
 from manageFile import getEmployeeList
 from newEmployeeGUI import newEmployeeWdw
 from editEmployeeGUI import employeeInfoWdw
+from sortEmployees import searchForEmployee
 
 class EmployeeGui:
     def __init__(self):
@@ -81,7 +82,8 @@ class EmployeeGui:
         tb.Label(self.sortingFrame, text="Search By Full Name", width=18, style="Custom.TLabel").place(x=20, y=130)
         searchEntry = tb.Entry(self.sortingFrame, width=18)
         searchEntry.place(x=15, y=150)
-        tb.Button(self.sortingFrame, width=10, text="Search", bootstyle="success").place(x=34, y=185)
+        tb.Button(self.sortingFrame, width=10, text="Search", bootstyle="success",
+                  command=lambda: searchForEmployee(self.root, self.instance, searchEntry.get())).place(x=34, y=185)
 
 
     def createEmployeeFrame(self):
