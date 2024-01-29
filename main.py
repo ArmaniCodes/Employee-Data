@@ -1,5 +1,5 @@
-from GUI import EmployeeGUI
+from GUI import EmployeeGui
 
 
 if __name__ == '__main__':
-    eg = EmployeeGUI()
+    eg = EmployeeGui()
