@@ -70,6 +70,12 @@ class EmployeeGui:
         tb.Button(self.root, text="Sort By Salary", bootstyle="success", width=17,
                   command=lambda: sortBySalary(self.LoadSortedEmployees)).place(x=195, y=110)
 
+        tb.Label(self.sortingFrame, text="Search By Full Name", width=18, style="Custom.TLabel").place(x=20, y=130)
+        searchEntry = tb.Entry(self.sortingFrame, width=18)
+        searchEntry.place(x=15, y=150)
+        tb.Button(self.sortingFrame, width=10, text="Search", bootstyle="success").place(x=34, y=185)
+
+
     def createEmployeeFrame(self):
         self.inner_frame = tk.Frame(self.canvas)
         #Creates window
