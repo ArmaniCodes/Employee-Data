@@ -176,3 +176,10 @@ def employeeInfoWdw(root,name,guiInstance):
     training.insert(0, values["Training/Programs"])
     training.grid(row=9, column=4, sticky="w", pady=(0, 5))
     entryList["Training/Programs"] = training
+
+    # Create labels and entry widgets for employee extra Info
+    tb.Label(details_frame2, text="Any Extra Information:").grid(row=10, column=3, pady=(0, 5), sticky="e")
+    extra_entry = tb.Entry(details_frame2, width=15)
+    extra_entry.insert(0, values["Extra Information"])
+    extra_entry.grid(row=10, column=4, sticky="w", pady=(0, 5))
+    entryList["Extra Information"] = extra_entry
