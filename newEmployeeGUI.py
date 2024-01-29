@@ -5,7 +5,8 @@ from Modules import *
 def save(new_window,entryList,guiInstance):
     for k,v in entryList.items():
         list[k] = v.get()
-
+    fname = list["FirstName"]
+    lname = list["LastName"]
 
 #Create New EmployeeGUI
 def newEmployeeWdw(root,guiInstance):
