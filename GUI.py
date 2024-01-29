@@ -60,6 +60,13 @@ class EmployeeGui:
         self.sortingFrame = tb.Frame(self.root, style="My.TFrame", width=150, height=250)
         self.sortingFrame.pack(side="left", anchor="n", padx=20, pady=20)
 
+        #Sorting Buttons
+        tb.Button(self.root, text="Sort Alphabetically", bootstyle="success", width=17,
+                  command=lambda: sortByName(self.LoadSortedEmployees)).place(x=195, y=30)
+        tb.Button(self.root, text="Sort By Employee ID", bootstyle="success", width=18,
+                  command=lambda: sortByID(self.LoadSortedEmployees)).place(x=192, y=70)
+        tb.Button(self.root, text="Sort By Salary", bootstyle="success", width=17,
+                  command=lambda: sortBySalary(self.LoadSortedEmployees)).place(x=195, y=110)
 
     def createEmployeeFrame(self):
         self.inner_frame = tk.Frame(self.canvas)
