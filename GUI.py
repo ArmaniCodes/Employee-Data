@@ -50,7 +50,11 @@ class EmployeeGui:
 
 
     def clearEmployees(self):
-        pass
+        #Destroying this clears all it's children AKA employees
+        self.inner_frame.destroy()
+        #Create new frame with no employees
+        self.createEmployeeFrame()
+
     def LoadEmployees(self):
         employees = getEmployeeList()
         if employees:
