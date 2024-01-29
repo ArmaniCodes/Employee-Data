@@ -72,3 +72,4 @@ class EmployeeGui:
 
             for i in employees:
                 self.employeeCount+=1
+                b = tb.Button(self.inner_frame, width=20, text=i, style="Custom.TButton")
