@@ -21,3 +21,10 @@ def newEmployeeWdw(root,guiInstance):
 
     #Store Entries in form of dictionary
     entryList = {}
+
+    #Frames to store labels/Entries
+    details_frame = tb.Frame(new_window, width=0)
+    details_frame.pack(side="left", anchor="n", pady=15, padx=10)
+
+    details_frame2 = tb.Frame(new_window, width=200)
+    details_frame2.pack(side="right", anchor="n", pady=15, padx=10, expand=True, fill="x")
