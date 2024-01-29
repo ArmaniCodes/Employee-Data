@@ -35,6 +35,7 @@ def save(new_window,entryList,guiInstance):
     #Validate Name
     name =  checkIfEmployeeExist( (fname + " " + lname), list["Employee ID"])
     newList = {name: list}
+    newList[name]["Age"] = calculate_age(newList[name]["Date Of Birth"])
 
 #Create New EmployeeGUI
 def newEmployeeWdw(root,guiInstance):
