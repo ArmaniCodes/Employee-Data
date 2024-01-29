@@ -88,3 +88,5 @@ class EmployeeGui:
                 b.pack(fill="x")
             self.updateScrollingFrame()
             self.updateEmployeeLabel()
+        else:
+            self.clearEmployees()
