@@ -85,3 +85,9 @@ def newEmployeeWdw(root,guiInstance):
     address_entry = tb.Entry(details_frame, width=17)
     address_entry.grid(row=9, column=1, sticky="w", pady=(0, 5))
     entryList["Address"] = address_entry
+
+    # Create label and entry widget for employee's ID, then store in entryList
+    tb.Label(details_frame, text="Employee ID:").grid(row=10, column=0, sticky="e", pady=(0, 5))
+    ID_entry = tb.Entry(details_frame, width=17)
+    ID_entry.grid(row=10, column=1, sticky="w", pady=(0, 5))
+    entryList["Employee ID"] = ID_entry
