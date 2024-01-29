@@ -15,3 +15,8 @@ def employeeInfoWdw(root,name,guiInstance):
 
     #Title
     label = tb.Label(new_window, text=name + "'s info, override if necessary ", font=("Helvetica", 13)).pack(pady=5)
+
+    #Save Button
+    close_button = tb.Button(new_window, text="Save/Close", command=lambda: save(new_window, entryList),
+                             bootstyle="success,outline")
+    close_button.pack(side="bottom")
