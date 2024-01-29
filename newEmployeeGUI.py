@@ -28,3 +28,13 @@ def newEmployeeWdw(root,guiInstance):
 
     details_frame2 = tb.Frame(new_window, width=200)
     details_frame2.pack(side="right", anchor="n", pady=15, padx=10, expand=True, fill="x")
+
+    #Personal Information Label
+    tb.Label(details_frame, text="Personal Information", bootstyle="success", font=("Helvetica", 11)).grid(row=0,
+                                                                                                           column=0,
+                                                                                                           pady=10)
+    # Create label and entry widget for employee first Name, then store in entryList
+    tb.Label(details_frame, text="Employee First Name:").grid(row=1, column=0, sticky="e", pady=(0, 5))
+    name_entry = tb.Entry(details_frame, width=15)
+    name_entry.grid(row=1, column=1, sticky="w", pady=(0, 5))
+    entryList["FirstName"] = name_entry
