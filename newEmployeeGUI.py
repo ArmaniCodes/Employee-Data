@@ -136,3 +136,9 @@ def newEmployeeWdw(root,guiInstance):
     time_entry = tb.Entry(details_frame2, width=15)
     time_entry.grid(row=7, column=4, sticky="w", pady=(0, 5))
     entryList["Time and Attendance"] = time_entry
+
+    # Create label and entry widget for employees skills, then store in entryList
+    tb.Label(details_frame2, text="Certifications and Skills:").grid(row=8, column=3, pady=(0, 5), sticky="e")
+    certs_entry = tb.Entry(details_frame2, width=15)
+    certs_entry.grid(row=8, column=4, sticky="w", pady=(0, 5))
+    entryList["Certifications and Skills"] = certs_entry
