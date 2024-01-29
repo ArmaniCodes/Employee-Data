@@ -64,3 +64,10 @@ def employeeInfoWdw(root,name,guiInstance):
     dob_entry.insert(0, values["Date Of Birth"])
     dob_entry.grid(row=3, column=1, sticky="w", pady=(0, 5))
     entryList["Date Of Birth"] = dob_entry
+
+    # Create labels and entry widgets for employee Sex
+    tb.Label(details_frame, text="Employee Sex:").grid(row=4, column=0, sticky="e", pady=(0, 5))
+    gender_entry = tb.Entry(details_frame, width=15)
+    gender_entry.insert(0, values["Sex"])
+    gender_entry.grid(row=4, column=1, sticky="w", pady=(0, 5))
+    entryList["Sex"] = gender_entry
