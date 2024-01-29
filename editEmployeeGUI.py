@@ -4,4 +4,5 @@ from modules import *
 
 
 def employeeInfoWdw(root,name,guiInstance):
-    pass
+    #Get the button that stores this individual employee's name
+    buttonInstance = guiInstance.buttonList[name]
