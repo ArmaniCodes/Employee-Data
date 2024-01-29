@@ -12,3 +12,6 @@ def employeeInfoWdw(root,name,guiInstance):
     new_window.title(name + "'s info")
     new_window.geometry("600x500")
     new_window.resizable(False, False)
+
+    #Title
+    label = tb.Label(new_window, text=name + "'s info, override if necessary ", font=("Helvetica", 13)).pack(pady=5)
