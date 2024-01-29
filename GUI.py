@@ -100,6 +100,6 @@ class EmployeeGui:
                 self.buttonList[i] = b
                 b.pack(fill="x")
             self.updateScrollingFrame()
-            self.updateEmployeeLabel()
+            self.updateEmployeeLabel(self.employeeCount)
         else:
             self.clearEmployees()
