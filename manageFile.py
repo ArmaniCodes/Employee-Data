@@ -1,5 +1,5 @@
-from modules import os
-from modules import json
+from Modules import os
+from Modules import json
 
 
 def getEmployeeList():
