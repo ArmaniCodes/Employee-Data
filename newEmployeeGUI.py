@@ -18,3 +18,6 @@ def newEmployeeWdw(root,guiInstance):
     close_button = tb.Button(new_window, text="Save", command=lambda: save(new_window, entryList, guiInstance),
                              bootstyle="success,outline")
     close_button.pack(side="bottom")
+
+    #Store Entries in form of dictionary
+    entryList = {}
