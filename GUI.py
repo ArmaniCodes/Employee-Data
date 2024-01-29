@@ -9,3 +9,6 @@ class EmployeeGui:
         self.root.geometry("1150x500")
         self.root.resizable(False, False)
         self.root.title("Employee Dashboard")
+
+        #Store instance of GUI for later Use
+        self.instance = self
