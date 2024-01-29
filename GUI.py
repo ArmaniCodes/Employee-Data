@@ -55,7 +55,8 @@ class EmployeeGui:
     def addEmployeeToFrame(self,name):
         self.employeeCount += 1
         b = tb.Button(self.inner_frame, width=20, text=name, style="Custom.TButton")
-
+        b.pack(fill="x")
+        self.buttonList[name] = b
     def clearEmployees(self):
         #Destroying this clears all it's children AKA employees
         self.inner_frame.destroy()
