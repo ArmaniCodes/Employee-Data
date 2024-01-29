@@ -37,3 +37,13 @@ def checkIfEmployeeExist(name,empID):
 def saveToFile(employee_data):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(script_dir, 'employee_data.json')
+
+    #If it exist we update if not then we create
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as file:
+            loaded_employee_data = json.load(file)
+    else:
+        loaded_employee_data = employee_data
+    loaded_employee_data.update(employee_data)
+    with open(file_path, 'w') as file:
+            json.dump(loaded_employee_data, file)
