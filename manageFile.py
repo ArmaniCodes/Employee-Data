@@ -19,4 +19,10 @@ def getEmployeeList():
 
 
 def checkIfEmployeeExist(name,employee_data):
-    pass
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, 'employee_data.json')
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as file:
+            loaded_employee_data = json.load(file)
+    else:
+        return name
