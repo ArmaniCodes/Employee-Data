@@ -1,5 +1,5 @@
 from modules import *
-
+from manageFile import getEmployeeList
 
 
 
@@ -27,3 +27,7 @@ def employeeInfoWdw(root,name,guiInstance):
 
     #Stores employee info
     entryList = {}
+    LIST = getEmployeeList()
+    if list is None or name not in list:
+        raise Exception("Error, Invalid Employee List or Employee does not Exist!")
+    values = list[name]
