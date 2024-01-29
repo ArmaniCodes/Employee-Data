@@ -104,3 +104,10 @@ def employeeInfoWdw(root,name,guiInstance):
     address_entry.insert(0, values["Address"])
     address_entry.grid(row=9, column=1, sticky="w", pady=(0, 5))
     entryList["Address"] = address_entry
+
+    # Create labels and entry widgets for employee ID
+    tb.Label(details_frame, text="Employee ID:").grid(row=10, column=0, sticky="e", pady=(0, 5))
+    ID_entry = tb.Entry(details_frame, width=17)
+    ID_entry.insert(0, values["Employee ID"])
+    ID_entry.grid(row=10, column=1, sticky="w", pady=(0, 5))
+    entryList["Employee ID"] = ID_entry
