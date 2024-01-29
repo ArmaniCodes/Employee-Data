@@ -57,7 +57,8 @@ class EmployeeGui:
 
     #Frame all about sorting Employee Data
     def createSortingFrame(self):
-        pass
+        self.sortingFrame = tb.Frame(self.root, style="My.TFrame", width=150, height=250)
+        self.sortingFrame.pack(side="left", anchor="n", padx=20, pady=20)
 
 
     def createEmployeeFrame(self):
