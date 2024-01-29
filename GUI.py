@@ -57,6 +57,8 @@ class EmployeeGui:
         b = tb.Button(self.inner_frame, width=20, text=name, style="Custom.TButton")
         b.pack(fill="x")
         self.buttonList[name] = b
+        self.updateScrollingFrame()
+        self.updateEmployeeLabel(self.employeeCount)
     def clearEmployees(self):
         #Destroying this clears all it's children AKA employees
         self.inner_frame.destroy()
