@@ -24,3 +24,6 @@ def employeeInfoWdw(root,name,guiInstance):
     #Delete Button
     delete_button = tb.Button(new_window, text="DELETE",bootstyle="danger,outline")
     delete_button.place(relx=0, rely=1, anchor="sw")
+
+    #Stores employee info
+    entryList = {}
