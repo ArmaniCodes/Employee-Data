@@ -21,6 +21,11 @@ def save(new_window,entryList,guiInstance):
     del list["FirstName"]
     del list["LastName"]
 
+    #If names are empty we instantly return
+    if fname == '' or lname == '':
+        rootWindow.destroy()
+        return
+
 #Create New EmployeeGUI
 def newEmployeeWdw(root,guiInstance):
     #Window specs
