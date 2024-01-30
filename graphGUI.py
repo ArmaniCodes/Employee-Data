@@ -56,6 +56,9 @@ class graphGUI():
         max_age = max(employee["Age"] for employee in employees.values())
         bins = [i for i in range(min_age, max_age + bin_size, bin_size)]
 
+        # Initialize age_salaries dictionary
+        age_salaries = {bin_center: [] for bin_center in range(min_age + bin_size // 2, max_age, bin_size)}
+
     def create_lineChart(self, employees):
         pass
 
