@@ -22,3 +22,8 @@ class graphGUI():
         fig, ax = plt.subplots()
         fig.patch.set_alpha(0)
         ax.set_title('Sex Distribution', fontdict={'color': 'white', 'size': 9})
+
+        colors = ['#26358a', '#00E2A9']
+        ax.pie(data, labels=labels, autopct='%1.1f%%', startangle=50, textprops={'fontsize': 8, 'color': 'white'},
+               colors=colors, wedgeprops=dict(width=0.4, edgecolor='black'))
+        ax.axis('equal')
