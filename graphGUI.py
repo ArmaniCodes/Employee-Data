@@ -106,3 +106,10 @@ class graphGUI():
         ax.tick_params(axis='y', colors='white', labelsize=9)
         fig.patch.set_alpha(0.0)
         ax.set_facecolor((0, 0, 0, 0.0))
+
+        chart_frame = tk.Frame(self.root, width=0, height=0)
+        chart_frame.place(x=640, y=250)
+        canvas = FigureCanvasTkAgg(fig, master=chart_frame)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.configure(width=485, height=180, background="gray20")
+        canvas_widget.pack()
