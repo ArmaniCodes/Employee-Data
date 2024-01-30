@@ -67,6 +67,11 @@ class graphGUI():
                 if bin_start <= employee["Age"] < bin_end:
                     age_salaries[bin_center].append(int(employee["Salary"]))
 
+        #Format data
+        bins_for_plotting = list(age_salaries.keys())
+        average_salaries = [sum(salaries) / len(salaries) if salaries else 0 for salaries in age_salaries.values()]
+        return (bins_for_plotting, average_salaries)
+
     def create_lineChart(self, employees):
         pass
 
