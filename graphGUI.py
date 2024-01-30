@@ -19,7 +19,8 @@ class graphGUI():
 
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
-        pass
+        chart_frame = tk.Frame(self.root, width=0, height=0)
+        chart_frame.place(x=395, y=250)
 
     #Sex Distribution Pie chart
     def create_gender_piechart(self,data,labels):
