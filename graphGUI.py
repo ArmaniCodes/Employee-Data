@@ -16,6 +16,7 @@ class graphGUI():
     def createGraphs(self,employeeStatsRef,employees):
         self.create_gender_piechart([employeeStatsRef.maleCount, employeeStatsRef.femaleCount], ['M','F'])
         self.create_donut_chart(employeeStatsRef)
+        self.create_lineChart(employees)
 
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
