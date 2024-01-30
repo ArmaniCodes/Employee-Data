@@ -26,6 +26,8 @@ class graphGUI():
             ({category: (value / total) * 100 for category, value in employeeStatsRef.employmentType.items()}).values())
         labels = employeeStatsRef.employmentType.keys()
 
+        colors = ['lightblue', 'lightcoral', 'pink', 'red']
+        textprops = {'fontsize': 7, 'color': 'white', 'weight': 'bold'}
 
 
     #Sex Distribution Pie chart
