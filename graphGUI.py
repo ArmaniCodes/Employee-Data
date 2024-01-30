@@ -13,3 +13,5 @@ class graphGUI():
         self.graphFrame.place(x=380, y=20)
 
 
+    def createGraphs(self,employeeStatsRef,employees):
+        pass
