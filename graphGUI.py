@@ -127,3 +127,14 @@ class graphGUI():
         for i in employees:
             salary = int(employees[i]["Salary"])
             salaries.append(salary)
+
+        #Create and format graph
+        fig, ax = plt.subplots()
+        fig.patch.set_alpha(0.0)
+        ax.set_facecolor((0, 0, 0, 0.0))
+        n, bins, patches = ax.hist(salaries, bins='auto', edgecolor='black', alpha=0.7, color='#00E2A9')
+        ax.set_title('Employee Salary Histogram', fontdict={'color': 'white', 'size': 9})
+        ax.set_xlabel('Salary', fontdict={'color': 'white', 'size': 9})
+        ax.set_ylabel('Frequency', fontdict={'color': 'white', 'size': 9})
+        ax.tick_params(axis='x', colors='white', labelsize=9)
+        ax.tick_params(axis='y', colors='white', labelsize=9)
