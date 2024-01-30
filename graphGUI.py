@@ -94,6 +94,8 @@ class graphGUI():
         average_salaries = [sum(salaries) / len(salaries) if salaries else 0 for salaries in age_salaries.values()]
         return (bins_for_plotting, average_salaries)
 
+
+    #Salary & Age Line chart
     def create_lineChart(self, employees):
         data = self.formatLineChartData(employees)
 
@@ -114,3 +116,7 @@ class graphGUI():
         canvas_widget = canvas.get_tk_widget()
         canvas_widget.configure(width=485, height=180, background="gray20")
         canvas_widget.pack()
+
+    #Salary histogram
+    def create_histogram(self,employees):
+        pass
