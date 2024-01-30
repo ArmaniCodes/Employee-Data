@@ -60,6 +60,10 @@ class EmployeeGui:
         self.createEmployeeFrame()
         self.createSortingFrame()
 
+    #Remove employee from frame
+    def removeEmployeeFromFrame(self,buttonInstance):
+        pass
+
     #Frame all about sorting Employee Data
     def createSortingFrame(self):
         #Style for the frame and label
