@@ -15,23 +15,31 @@ class graphGUI():
 
     def createGraphs(self,employeeStatsRef,employees):
         self.create_gender_piechart([employeeStatsRef.maleCount, employeeStatsRef.femaleCount], ['M','F'])
-
+        self.create_donut_chart(employeeStatsRef)
 
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
         chart_frame = tk.Frame(self.root, width=0, height=0)
         chart_frame.place(x=395, y=250)
+        #Total of status stats
         total = sum(employeeStatsRef.employmentType.values())
+
+        #Format values
         values = list(
             ({category: (value / total) * 100 for category, value in employeeStatsRef.employmentType.items()}).values())
         labels = employeeStatsRef.employmentType.keys()
 
+        #Graph theme
         colors = ['lightblue', 'lightcoral', 'pink', 'red']
         textprops = {'fontsize': 7, 'color': 'white', 'weight': 'bold'}
+
+        #Graph creation
         fig, ax = plt.subplots()
         ax.set_title('Employment Status Breakdown', fontdict={'color': 'white', 'size': 9})
         ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=90, wedgeprops=dict(width=0.4, edgecolor='black'),
                textprops=textprops, labeldistance=0.9)
+
+        #Set canvas to transparent
         fig.patch.set_alpha(0.0)
         ax.set_facecolor((0, 0, 0, 0.0))
         ax.axis('equal')
