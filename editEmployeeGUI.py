@@ -18,6 +18,10 @@ def save(new_window,entryList,name):
     saveToFile(newList)
     new_window.destroy()
 
+
+def delEmployeeHelper(name,rootwindow,guiInstance,buttonInstance):
+    pass
+
 def employeeInfoWdw(root,name,guiInstance):
     #Get the button that stores this individual employee's name
     buttonInstance = guiInstance.buttonList[name]
