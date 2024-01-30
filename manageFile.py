@@ -2,6 +2,9 @@ from Modules import os
 from Modules import json
 
 
+def deleteEmployee(name):
+    pass
+
 def getEmployeeList():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(script_dir, 'employee_data.json')
