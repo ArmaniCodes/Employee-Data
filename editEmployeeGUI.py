@@ -42,7 +42,9 @@ def employeeInfoWdw(root,name,guiInstance):
     close_button.pack(side="bottom")
 
     #Delete Button
-    delete_button = tb.Button(new_window, text="DELETE",bootstyle="danger,outline")
+    delete_button = tb.Button(new_window, text="DELETE",
+                              command=lambda: delEmployeeHelper(name, new_window, guiInstance, buttonInstance),
+                              bootstyle="danger,outline")
     delete_button.place(relx=0, rely=1, anchor="sw")
 
     #Stores employee info
