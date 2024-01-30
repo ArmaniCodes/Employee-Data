@@ -30,3 +30,7 @@ class graphGUI():
 
         chart_frame = tk.Frame(self.root, width=0, height=0)
         chart_frame.place(x=395, y=25)
+        canvas = FigureCanvasTkAgg(fig, master=chart_frame)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.configure(width=200, height=200, background="gray20")
+        canvas_widget.pack()
