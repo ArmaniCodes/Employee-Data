@@ -51,7 +51,9 @@ class graphGUI():
 
 
     def formatLineChartData(self,employees):
-        pass
+        bin_size = 5
+        min_age = min(employee["Age"] for employee in employees.values())
+        max_age = max(employee["Age"] for employee in employees.values())
 
     def create_lineChart(self, employees):
         pass
