@@ -15,3 +15,6 @@ class graphGUI():
 
     def createGraphs(self,employeeStatsRef,employees):
         pass
+
+    def create_pie_chart(self,data,labels):
+        pass
