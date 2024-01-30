@@ -14,8 +14,12 @@ class graphGUI():
 
 
     def createGraphs(self,employeeStatsRef,employees):
-        self.create_gender_piechart([employeeStatsRef.maleCount,employeeStatsRef.femaleCount], ['M','F'])
+        self.create_gender_piechart([employeeStatsRef.maleCount, employeeStatsRef.femaleCount], ['M','F'])
 
+
+    #Employment Status Breakdown Chart
+    def create_donut_chart(self,employeeStatsRef):
+        pass
 
     #Sex Distribution Pie chart
     def create_gender_piechart(self,data,labels):
