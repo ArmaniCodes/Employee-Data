@@ -50,6 +50,27 @@ class graphGUI():
         canvas_widget.pack()
 
 
+    #Sex Distribution Pie chart
+    def create_gender_piechart(self,data,labels):
+        fig, ax = plt.subplots()
+        fig.patch.set_alpha(0)
+        ax.set_title('Sex Distribution', fontdict={'color': 'white', 'size': 9})
+
+        colors = ['#26358a', '#00E2A9']
+        ax.pie(data, labels=labels, autopct='%1.1f%%', startangle=50, textprops={'fontsize': 8, 'color': 'white'},
+               colors=colors, wedgeprops=dict(width=0.4, edgecolor='black'))
+        ax.axis('equal')
+
+        chart_frame = tk.Frame(self.root, width=0, height=0)
+        chart_frame.place(x=395, y=25)
+        canvas = FigureCanvasTkAgg(fig, master=chart_frame)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.configure(width=200, height=200, background="gray20")
+        canvas_widget.pack()
+
+
+
+
     def formatLineChartData(self,employees):
         bin_size = 5
         min_age = min(employee["Age"] for employee in employees.values())
@@ -73,22 +94,4 @@ class graphGUI():
         return (bins_for_plotting, average_salaries)
 
     def create_lineChart(self, employees):
-        pass
-
-    #Sex Distribution Pie chart
-    def create_gender_piechart(self,data,labels):
-        fig, ax = plt.subplots()
-        fig.patch.set_alpha(0)
-        ax.set_title('Sex Distribution', fontdict={'color': 'white', 'size': 9})
-
-        colors = ['#26358a', '#00E2A9']
-        ax.pie(data, labels=labels, autopct='%1.1f%%', startangle=50, textprops={'fontsize': 8, 'color': 'white'},
-               colors=colors, wedgeprops=dict(width=0.4, edgecolor='black'))
-        ax.axis('equal')
-
-        chart_frame = tk.Frame(self.root, width=0, height=0)
-        chart_frame.place(x=395, y=25)
-        canvas = FigureCanvasTkAgg(fig, master=chart_frame)
-        canvas_widget = canvas.get_tk_widget()
-        canvas_widget.configure(width=200, height=200, background="gray20")
-        canvas_widget.pack()
+        data = self.formatLineChartData(employees)
