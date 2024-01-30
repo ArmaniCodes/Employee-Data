@@ -50,6 +50,8 @@ class graphGUI():
         canvas_widget.pack()
 
 
+    def formatLineChartData(self,employees):
+        pass
 
     #Sex Distribution Pie chart
     def create_gender_piechart(self,data,labels):
