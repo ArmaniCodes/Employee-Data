@@ -4,6 +4,7 @@ from newEmployeeGUI import newEmployeeWdw
 from editEmployeeGUI import employeeInfoWdw
 from sortEmployees import searchForEmployee, sortByName,sortBySalary,sortByID
 from graphGUI import graphGUI
+from employeeStats import EmployeeStatistics
 class EmployeeGui:
     def __init__(self):
         #Dark Theme
@@ -12,8 +13,8 @@ class EmployeeGui:
         self.root.geometry("1150x500")
         self.root.resizable(False, False)
         self.root.title("Employee Dashboard")
-
-        self.employeeCount = 0
+        self.empstats = EmployeeStatistics()
+        self.employeeCount = self.empstats.employeeCount
         self.buttonList = {}
 
         #Store instance of GUI for later Use
@@ -140,6 +141,7 @@ class EmployeeGui:
                 b.configure(command=lambda t=i, button=b: employeeInfoWdw(self.root, t, self.instance))
                 self.buttonList[i] = b
                 b.pack(fill="x")
+                self.empstats.sortStats(employees[i])
             self.updateScrollingFrame()
             self.updateEmployeeLabel(self.employeeCount)
         else:
