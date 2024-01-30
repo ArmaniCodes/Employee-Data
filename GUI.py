@@ -64,6 +64,8 @@ class EmployeeGui:
     def removeEmployeeFromFrame(self,buttonInstance):
         self.employeeCount -= 1
         del self.buttonList[buttonInstance.cget("text")]
+        buttonInstance.destroy()
+        self.updateEmployeeLabel(self.employeeCount)
 
     #Frame all about sorting Employee Data
     def createSortingFrame(self):
