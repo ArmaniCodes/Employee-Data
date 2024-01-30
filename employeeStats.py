@@ -16,4 +16,9 @@ class EmployeeStatistics():
         self.femaleCount-=1
 
     def sortStats(self,employeeData):
-        pass
+        if employeeData["Gender"] == "Male":
+            self.increaseMaleCount()
+        if employeeData["Gender"] == "Female":
+            self.increaseFemaleCount()
+
+        self.employmentType[employeeData["Status"]] += 1
