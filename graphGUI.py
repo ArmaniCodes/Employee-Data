@@ -22,6 +22,12 @@ class graphGUI():
         chart_frame = tk.Frame(self.root, width=0, height=0)
         chart_frame.place(x=395, y=250)
         total = sum(employeeStatsRef.employmentType.values())
+        values = list(
+            ({category: (value / total) * 100 for category, value in employeeStatsRef.employmentType.items()}).values())
+        labels = employeeStatsRef.employmentType.keys()
+
+
+
     #Sex Distribution Pie chart
     def create_gender_piechart(self,data,labels):
         fig, ax = plt.subplots()
