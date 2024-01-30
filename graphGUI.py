@@ -16,5 +16,9 @@ class graphGUI():
     def createGraphs(self,employeeStatsRef,employees):
         pass
 
-    def create_pie_chart(self,data,labels):
-        pass
+
+    #Sex Distribution Pie chart
+    def create_gender_piechart(self,data,labels):
+        fig, ax = plt.subplots()
+        fig.patch.set_alpha(0)
+        ax.set_title('Sex Distribution', fontdict={'color': 'white', 'size': 9})
