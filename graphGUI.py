@@ -21,7 +21,7 @@ class graphGUI():
     def create_donut_chart(self,employeeStatsRef):
         chart_frame = tk.Frame(self.root, width=0, height=0)
         chart_frame.place(x=395, y=250)
-
+        total = sum(employeeStatsRef.employmentType.values())
     #Sex Distribution Pie chart
     def create_gender_piechart(self,data,labels):
         fig, ax = plt.subplots()
