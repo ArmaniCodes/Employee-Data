@@ -138,3 +138,8 @@ class graphGUI():
         ax.set_ylabel('Frequency', fontdict={'color': 'white', 'size': 9})
         ax.tick_params(axis='x', colors='white', labelsize=9)
         ax.tick_params(axis='y', colors='white', labelsize=9)
+
+        canvas = FigureCanvasTkAgg(fig, master=chart_frame)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.configure(width=475, height=190, background="gray20")
+        canvas_widget.pack()
