@@ -14,3 +14,6 @@ class EmployeeStatistics():
         self.maleCount-=1
     def decreaseFemaleCount(self):
         self.femaleCount-=1
+
+    def sortStats(self,employeeData):
+        pass
