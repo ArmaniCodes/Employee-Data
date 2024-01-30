@@ -95,3 +95,14 @@ class graphGUI():
 
     def create_lineChart(self, employees):
         data = self.formatLineChartData(employees)
+
+        #Create and setup graph
+        fig, ax = plt.subplots()
+        ax.plot(data[0], data[1], marker='o', linestyle='-', color='#00E2A9', label='Salary vs Age')
+        ax.set_xlabel('Age', fontdict={'color': 'white', 'size': 9})
+        ax.set_ylabel('Salary', fontdict={'color': 'white', 'size': 9})
+        ax.set_title('Salary vs Age Line Chart', fontdict={'color': 'white', 'size': 9})
+        ax.tick_params(axis='x', colors='white', labelsize=9)
+        ax.tick_params(axis='y', colors='white', labelsize=9)
+        fig.patch.set_alpha(0.0)
+        ax.set_facecolor((0, 0, 0, 0.0))
