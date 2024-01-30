@@ -144,6 +144,7 @@ class EmployeeGui:
                 self.empstats.sortStats(employees[i])
             self.updateScrollingFrame()
             self.updateEmployeeLabel(self.employeeCount)
+            self.graph_GUI.createGraphs(self.empstats,employees)
         else:
             self.clearEmployees()
 
