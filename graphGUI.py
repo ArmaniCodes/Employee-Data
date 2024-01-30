@@ -27,3 +27,6 @@ class graphGUI():
         ax.pie(data, labels=labels, autopct='%1.1f%%', startangle=50, textprops={'fontsize': 8, 'color': 'white'},
                colors=colors, wedgeprops=dict(width=0.4, edgecolor='black'))
         ax.axis('equal')
+
+        chart_frame = tk.Frame(self.root, width=0, height=0)
+        chart_frame.place(x=395, y=25)
