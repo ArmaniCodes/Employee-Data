@@ -3,7 +3,7 @@ from manageFile import getEmployeeList
 from newEmployeeGUI import newEmployeeWdw
 from editEmployeeGUI import employeeInfoWdw
 from sortEmployees import searchForEmployee, sortByName,sortBySalary,sortByID
-
+from graphGUI import graphGUI
 class EmployeeGui:
     def __init__(self):
         #Dark Theme
@@ -27,6 +27,8 @@ class EmployeeGui:
                          lightcolor=background_color, darkcolor=background_color, highlightthickness=0, bd=0)
 
 
+        #Store graphGUI instance
+        self.graph_GUI = graphGUI(self.root)
 
         self.root.mainloop()
 
