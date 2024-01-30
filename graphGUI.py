@@ -119,4 +119,5 @@ class graphGUI():
 
     #Salary histogram
     def create_histogram(self,employees):
-        pass
+        chart_frame = tk.Frame(self.root, width=0, height=0)
+        chart_frame.place(x=650, y=25)
