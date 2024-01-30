@@ -11,3 +11,5 @@ class graphGUI():
     def createGraphFrame(self, root):
         self.graphFrame = tb.Frame(root, style="My.TFrame", width=750, height=430)
         self.graphFrame.place(x=380, y=20)
+
+
