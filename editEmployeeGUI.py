@@ -19,7 +19,7 @@ def save(new_window,entryList,name):
 
 
 def delEmployeeHelper(name,rootwindow,guiInstance,buttonInstance):
-    pass
+    deleteEmployee(name)
 
 def employeeInfoWdw(root,name,guiInstance):
     #Get the button that stores this individual employee's name
