@@ -44,6 +44,13 @@ class graphGUI():
         ax.set_facecolor((0, 0, 0, 0.0))
         ax.axis('equal')
 
+        canvas = FigureCanvasTkAgg(fig, master=chart_frame)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.configure(width=200, height=190, bg='gray20')
+        canvas_widget.pack()
+
+
+
     #Sex Distribution Pie chart
     def create_gender_piechart(self,data,labels):
         fig, ax = plt.subplots()
