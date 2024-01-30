@@ -28,7 +28,13 @@ class graphGUI():
 
         colors = ['lightblue', 'lightcoral', 'pink', 'red']
         textprops = {'fontsize': 7, 'color': 'white', 'weight': 'bold'}
-
+        fig, ax = plt.subplots()
+        ax.set_title('Employment Status Breakdown', fontdict={'color': 'white', 'size': 9})
+        ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=90, wedgeprops=dict(width=0.4, edgecolor='black'),
+               textprops=textprops, labeldistance=0.9)
+        fig.patch.set_alpha(0.0)
+        ax.set_facecolor((0, 0, 0, 0.0))
+        ax.axis('equal')
 
     #Sex Distribution Pie chart
     def create_gender_piechart(self,data,labels):
