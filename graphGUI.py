@@ -53,6 +53,9 @@ class graphGUI():
     def formatLineChartData(self,employees):
         pass
 
+    def create_lineChart(self, employees):
+        pass
+
     #Sex Distribution Pie chart
     def create_gender_piechart(self,data,labels):
         fig, ax = plt.subplots()
