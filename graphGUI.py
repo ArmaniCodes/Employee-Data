@@ -121,3 +121,9 @@ class graphGUI():
     def create_histogram(self,employees):
         chart_frame = tk.Frame(self.root, width=0, height=0)
         chart_frame.place(x=650, y=25)
+
+        #Store salaries for chart
+        salaries = []
+        for i in employees:
+            salary = int(employees[i]["Salary"])
+            salaries.append(salary)
