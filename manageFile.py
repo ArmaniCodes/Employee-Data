@@ -3,7 +3,15 @@ from Modules import json
 
 
 def deleteEmployee(name):
-    pass
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, 'employee_data.json')
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as file:
+            loaded_employee_data = json.load(file)
+    if name in loaded_employee_data:
+        del loaded_employee_data[name]
+    with open(file_path, 'w') as file:
+        json.dump(loaded_employee_data, file)
 
 def getEmployeeList():
     script_dir = os.path.dirname(os.path.abspath(__file__))
