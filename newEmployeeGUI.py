@@ -3,14 +3,6 @@ from datetime import datetime
 
 
 
-#Input validate names
-def cleanNames(phrase):
-    newPhrase = ""
-    for i in phrase:
-        if i.isalnum():
-            newPhrase += i
-    return newPhrase
-
 #Save Data
 def save(new_window,entryList,guiInstance):
     #Convert entry to the entries text from v.get()

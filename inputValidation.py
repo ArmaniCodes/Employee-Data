@@ -73,6 +73,16 @@ def checkIfPersonExist(name, emID):
         name += " " + emID
     return name
 
+
+
+#Input validate names
+def cleanNames(phrase):
+    newPhrase = ""
+    for i in phrase:
+        if i.isalnum():
+            newPhrase += i
+    return newPhrase
+
 #Calculates employees age and returns it
 def calculate_age(birthdate):
     today = datetime.today()
