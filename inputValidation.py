@@ -54,7 +54,18 @@ def checkStatus(data):
 
 #Method to ensure that user is not supplying duplicate employee ID
 def checkID(data):
-    pass
+    #Get entry instance and text
+    emID = data["Employee ID"].get()
+    ID_entry = data["Employee ID"]
+
+    if search_employee_by_id(emID):
+        #Warn user and return False to prevent saving
+        ID_entry.delete(0, tb.END)
+        ID_entry.insert(0, 'ERROR DUPLICATE ID ENTER NEW ONE')
+        ID_entry.config(foreground='red')  # Set text color to black
+        return False
+
+    return True
 
 #Calculates employees age and returns it
 def calculate_age(birthdate):
