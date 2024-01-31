@@ -5,7 +5,7 @@ def get_all_employees_sorted_sql(sort_by_column):
     conn = sqlite3.connect('employee_data.db')
     cur = conn.cursor()
 
-    # Validate the sort_by_column to prevent SQL injection
+    # Validate the sort_by_column to prevent any Errors
     allowed_columns = ['salary', 'employee_id', 'name']
     if sort_by_column not in allowed_columns:
         raise ValueError("Invalid column for sorting.")
@@ -16,6 +16,14 @@ def get_all_employees_sorted_sql(sort_by_column):
                 ORDER BY {sort_by_column}
             '''
     cur.execute(query)
+
+    # fetch all results
+    sorted_results = cur.fetchall()
+
+    # close the connection
+    conn.close()
+
+    return sorted_results
 
 def delete_employee_by_id(employee_id):
     # Connect to SQLite database
