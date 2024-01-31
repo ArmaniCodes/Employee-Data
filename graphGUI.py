@@ -28,6 +28,7 @@ class graphGUI():
         gender = get_gender_counts()
         self.create_pie_chart([gender.get('M', 0), gender.get('F', 0)], ['M', 'F'])
 
+
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
         chart_frame = tk.Frame(self.root, width=0, height=0)
@@ -84,8 +85,10 @@ class graphGUI():
 
     def formatLineChartData(self,employees):
         bin_size = 5
-        min_age = min(employee["Age"] for employee in employees.values())
-        max_age = max(employee["Age"] for employee in employees.values())
+        # Get the minimum and maximum ages from the data
+        min_age = min(employee[-1] for employee in employees)
+        max_age = max(employee[-1] for employee in employees)
+
         bins = [i for i in range(min_age, max_age + bin_size, bin_size)]
 
         # Initialize age_salaries dictionary
