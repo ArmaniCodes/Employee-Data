@@ -33,3 +33,10 @@ def checkSalary(data):
 
     #else return True
     return True
+
+#Calculates employees age and returns it
+def calculate_age(birthdate):
+    today = datetime.today()
+    birthdate = datetime.strptime(birthdate, '%m/%d/%Y')
+    age = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
+    return age
