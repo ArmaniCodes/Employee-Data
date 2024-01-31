@@ -135,13 +135,10 @@ class EmployeeGui:
         if employees:
             self.clearEmployees() #Clear Previous Employees
             self.buttonList.clear()
-            #Set Employee Count to 0 before counting
-
-
             for i in employees:
-                b = tb.Button(self.inner_frame, width=20, text=i, style="Custom.TButton")
-                b.configure(command=lambda t=i, button=b: employeeInfoWdw(self.root, t, self.instance))
-                self.buttonList[i] = b
+                b = tb.Button(self.inner_frame, width=20, text=i[1], style="Custom.TButton")
+                b.configure(command=lambda t=i[1], button=b: employeeInfoWdw(self.root, t, self.instance))
+                self.buttonList[i[1]] = b
                 b.pack(fill="x")
                 #self.empstats.sortStats(employees[i])
             self.employeeCount = len(employees)
