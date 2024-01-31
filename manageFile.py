@@ -2,7 +2,18 @@ from Modules import sqlite3
 
 
 def search_employee_by_id(employee_id):
-    pass
+    #Connect to DB
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
+
+    cur.execute('''
+                SELECT * FROM employees WHERE employee_id = ?
+            ''', (employee_id,))
+
+    #close connection to local db and return results
+    result = cur.fetchone()
+    conn.close()
+    return result
 
 def getEmployeeList():
     #Connect to DB
