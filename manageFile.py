@@ -2,7 +2,14 @@ from Modules import sqlite3
 
 
 def delete_employee_by_id(employee_id):
-    pass
+    # Connect to SQLite database
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
+
+    # Execute the DELETE query
+    cur.execute('''
+            DELETE FROM employees WHERE employee_id = ?
+        ''', (employee_id,))
 
 def search_employee_by_id(employee_id):
     #Connect to DB
