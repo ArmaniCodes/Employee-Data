@@ -75,7 +75,20 @@ def checkIfPersonExist(name, emID):
 
 # This method will call all other validation methods
 def checkEntries(data):
-    pass
+    # We set retur to False if any fail so that if just one fails they all fail
+    # But also to allow warnings to occur instead of just instantly returning upon one failure
+    retur = True
+    if not checkID(data):
+        retur = False
+    if not checkGender(data):
+        retur = False
+    if not checkStatus(data):
+        retur = False
+    if not checkBirthDate(data):
+        retur = False
+    if not checkSalary(data):
+        retur = False
+    return retur
 
 
 #Input validate names
