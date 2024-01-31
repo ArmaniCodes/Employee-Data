@@ -80,9 +80,6 @@ class graphGUI():
         canvas_widget.configure(width=200, height=200, background="gray20")
         canvas_widget.pack()
 
-
-
-
     def formatLineChartData(self,employees):
         bin_size = 5
         # Get the minimum and maximum ages from the data
@@ -136,11 +133,8 @@ class graphGUI():
         chart_frame = tk.Frame(self.root, width=0, height=0)
         chart_frame.place(x=650, y=25)
 
-        #Store salaries for chart
-        salaries = []
-        for i in employees:
-            salary = int(employees[i]["Salary"])
-            salaries.append(salary)
+        #Retrieve salaries from database
+        salaries = get_all_salaries()
 
         #Create and format graph
         fig, ax = plt.subplots()
