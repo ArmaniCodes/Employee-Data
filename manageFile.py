@@ -11,6 +11,10 @@ def get_employee_data(employee_name):
                 SELECT * FROM employees WHERE name = ?
             ''', (employee_name,))
 
+    result = cur.fetchone()
+    conn.close()
+    return result
+
 #We need to format before adding to DB because the information is out of order
 def formatData(data,name):
     #Order to enter the db
