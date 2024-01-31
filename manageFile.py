@@ -12,7 +12,7 @@ def formatData(data,name):
     ]
 
     employee_values = tuple(data[name][key] for key in keys_order)
-
+    return employee_values
 def addEmployee(data,name):
     #Connection to local db
     conn = sqlite3.connect('employee_data.db')
