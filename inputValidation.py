@@ -69,7 +69,9 @@ def checkID(data):
 
 #Method to ensure duplicate names are changed
 def checkIfPersonExist(name, emID):
-    pass
+    if get_employee_data(name):
+        name += " " + emID
+    return name
 
 #Calculates employees age and returns it
 def calculate_age(birthdate):
