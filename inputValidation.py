@@ -80,7 +80,7 @@ def checkEntries(data):
     retur = True
     if not checkID(data):
         retur = False
-    if not checkGender(data):
+    if not checkSex(data):
         retur = False
     if not checkStatus(data):
         retur = False
