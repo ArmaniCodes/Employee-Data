@@ -18,4 +18,4 @@ def sortByID(LoadEmployeesMethod):
 def sortBySalary(LoadEmployeesFunction):
     data = get_all_employees_sorted_sql("salary")
     if data:
-        LoadEmployeesMethod(data)
+        LoadEmployeesFunction(data)
