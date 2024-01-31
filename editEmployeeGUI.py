@@ -3,6 +3,10 @@ from manageFile import get_employee_data, update_employee_data,delete_employee_b
 from inputValidation import calculate_age, checkBirthDate, checkSalary
 
 def save(new_window,entryList):
+    #Validate DOB and Salary since user can change and put incorrect format
+    if not checkBirthDate(entryList) or not checkSalary(entryList):
+        return False
+
     fname = entryList["FirstName"]
     lname = entryList["LastName"]
     del entryList["FirstName"]
