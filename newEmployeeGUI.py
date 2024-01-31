@@ -36,8 +36,8 @@ def save(new_window,entryList,guiInstance):
     newList[name]["Age"] = calculate_age(newList[name]["Date Of Birth"])
     newList[name]["Salary"] = int(newList[name]["Salary"])
 
-    #Save, DestroyGui, then add new Employee to employeeFrame
-    saveToFile(newList)
+    #Add employee, DestroyGui, then add new Employee to employeeFrame
+    addEmployee(newList,name)
     new_window.destroy()
     guiInstance.addEmployeeToFrame(name)
 
