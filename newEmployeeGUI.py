@@ -1,5 +1,5 @@
 from Modules import ttkbootstrap as tb
-from manageFile import addEmployee
+from manageFile import addEmployee,cleanNames
 from inputValidation import *
 
 
@@ -29,7 +29,7 @@ def save(new_window,entryList,guiInstance):
         rootWindow.destroy()
         return
     #Validate Name
-    name =  checkIfEmployeeExist( (fname + " " + lname), newList["Employee ID"])
+    name =  checkIfPersonExist( (fname + " " + lname), newList["Employee ID"])
 
     #Create new list and calculate Age
     newList = {name: newList}
