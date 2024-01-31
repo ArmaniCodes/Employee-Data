@@ -1,26 +1,21 @@
 from editEmployeeGUI import employeeInfoWdw
-from manageFile import getEmployeeList
+from manageFile import get_employee_data, get_all_employees_sorted_sql
 
 def searchForEmployee(root,guiInstance,name):
-    empList = getEmployeeList()
-    #If emply exist then we can call employeeInfoWdw which will load the data visually and allow us to edit it
-    if name in empList:
-        employeeInfoWdw(root,name,guiInstance)
+    if get_employee_data(name):
+        employeeInfoWdw(root, name, guiInstance)
 
 def sortByName(LoadEmployeesMethod):
-    data = getEmployeeList()
+    data = get_all_employees_sorted_sql("salary")
     if data:
-        sorted_data = dict(sorted(data.items()))
-        LoadEmployeesMethod(sorted_data)
+        LoadEmployeesFunction(data)
 
 def sortByID(LoadEmployeesMethod):
-    data = getEmployeeList()
+    data = get_all_employees_sorted_sql("name")
     if data:
-        sorted_data = dict(sorted(data.items(), key=lambda x: int(x[1]["Employee ID"])))
-        LoadEmployeesMethod(sorted_data)
+        LoadEmployeesFunction(data)
 
 def sortBySalary(LoadEmployeesFunction):
-    data = getEmployeeList()
+    data = get_all_employees_sorted_sql("employee_id")
     if data:
-        sorted_data = dict(sorted(data.items(), key=lambda x: int(x[1]["Salary"]), reverse=True))
-        LoadEmployeesFunction(sorted_data)
+        LoadEmployeesFunction(data)
