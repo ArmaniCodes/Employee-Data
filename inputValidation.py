@@ -73,6 +73,9 @@ def checkIfPersonExist(name, emID):
         name += " " + emID
     return name
 
+# This method will call all other validation methods
+def checkEntries(data):
+    pass
 
 
 #Input validate names
