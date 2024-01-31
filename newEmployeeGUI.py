@@ -11,25 +11,28 @@ def save(new_window,entryList,guiInstance):
     if not checkEntries(entryList):
         return
 
+    #Create a new list instead of modifying old one
+    newList = {}
+
     #Convert entry to the entries text from v.get()
     for k,v in entryList.items():
-        entryList[k] = v.get()
+        newList[k] = v.get()
 
     #Clean names from whitespaces and non alpha()
-    fname = cleanNames( entryList["FirstName"] )
-    lname = cleanNames(entryList["LastName"] )
-    del entryList["FirstName"]
-    del entryList["LastName"]
+    fname = cleanNames( newList["FirstName"] )
+    lname = cleanNames(newList["LastName"] )
+    del newList["FirstName"]
+    del newList["LastName"]
 
     #If names are empty we instantly return
     if fname == '' or lname == '':
         rootWindow.destroy()
         return
     #Validate Name
-    name =  checkIfEmployeeExist( (fname + " " + lname), entryList["Employee ID"])
+    name =  checkIfEmployeeExist( (fname + " " + lname), newList["Employee ID"])
 
     #Create new list and calculate Age
-    newList = {name: entryList}
+    newList = {name: newList}
     newList[name]["Age"] = calculate_age(newList[name]["Date Of Birth"])
 
     #Save, DestroyGui, then add new Employee to employeeFrame
