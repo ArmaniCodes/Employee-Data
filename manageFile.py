@@ -1,6 +1,10 @@
 from Modules import sqlite3
 
 
+
+def get_employee_data(employee_name):
+    pass
+
 #We need to format before adding to DB because the information is out of order
 def formatData(data,name):
     #Order to enter the db
@@ -13,6 +17,7 @@ def formatData(data,name):
 
     employee_values = tuple(data[name][key] for key in keys_order)
     return employee_values
+
 def addEmployee(data,name):
     #Connection to local db
     conn = sqlite3.connect('employee_data.db')
