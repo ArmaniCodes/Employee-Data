@@ -1,6 +1,8 @@
 from Modules import sqlite3
 
 
+def getEmployeeList():
+    pass
 
 def update_employee_data(employee_name,new_data):
     # Connect to SQLite database
