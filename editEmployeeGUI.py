@@ -1,6 +1,4 @@
 from Modules import *
-from manageFile import getEmployeeList, saveToFile,deleteEmployee
-from newEmployeeGUI import calculate_age
 
 def save(new_window,entryList,name):
     fname = entryList["FirstName"]

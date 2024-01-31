@@ -1,5 +1,5 @@
-from Modules import ttkbootstrap as tb
-from manageFile import addEmployee,cleanNames
+from Modules import tb
+from manageFile import addEmployee
 from inputValidation import *
 
 

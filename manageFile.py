@@ -1,4 +1,4 @@
-from Modules import sqlite3
+from Modules import sqlite3, os
 
 def get_all_employees_sorted_sql(sort_by_column):
     #connect to the SQLite database
@@ -43,7 +43,6 @@ def search_employee_by_id(employee_id):
     #Connect to DB
     conn = sqlite3.connect('employee_data.db')
     cur = conn.cursor()
-
     cur.execute('''
                 SELECT * FROM employees WHERE employee_id = ?
             ''', (employee_id,))
@@ -125,6 +124,39 @@ def formatData(data,name):
 
     employee_values = tuple(data[name][key] for key in keys_order)
     return employee_values
+
+def createTable():
+    # Connection to local db
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
+
+    # Creates Table if not already existing
+    cur.execute('''
+               CREATE TABLE IF NOT EXISTS employees (
+                   id INTEGER PRIMARY KEY,
+                   name TEXT,
+                   date_of_birth TEXT,
+                   sex TEXT,
+                   race TEXT,
+                   email TEXT,
+                   phone TEXT,
+                   address TEXT,
+                   employee_id TEXT,
+                   job_title TEXT,
+                   department TEXT,
+                   manager_leader TEXT,
+                   status TEXT,
+                   salary INTEGER,
+                   time_and_attendance TEXT,
+                   certifications_skills TEXT,
+                   training_programs TEXT,
+                   extra_information TEXT,
+                   age INTEGER
+               )
+           ''')
+    # Close Connection
+    conn.commit()
+    conn.close()
 
 def addEmployee(data,name):
     #Connection to local db
