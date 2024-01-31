@@ -1,7 +1,8 @@
 from Modules import *
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-
+from employeeStats import get_gender_counts,get_employment_type_counts,get_all_salaries
+from manageFile import getEmployeeList
 
 class graphGUI():
     def __init__(self,root):
