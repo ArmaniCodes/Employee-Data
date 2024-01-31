@@ -36,6 +36,10 @@ def employeeInfoWdw(root,name,guiInstance):
     #Title
     label = tb.Label(new_window, text=name + "'s info, override if necessary ", font=("Helvetica", 13)).pack(pady=5)
 
+    #Employee Data is stored as a tuple which is why we index to retrieve data
+    entryList = {}
+    employee_data = get_employee_data(name)
+
     #Save Button
     close_button = tb.Button(new_window, text="Save/Close", command=lambda: save(new_window, entryList),
                              bootstyle="success,outline")
@@ -47,14 +51,9 @@ def employeeInfoWdw(root,name,guiInstance):
                               bootstyle="danger,outline")
     delete_button.place(relx=0, rely=1, anchor="sw")
 
-    #Stores employee info
-    entryList = {}
 
-    #Check if list exist, it should be impossible for it to not exist if execution reaches here
-    LIST = getEmployeeList()
-    if LIST is None or name not in LIST:
-        raise Exception("Error, Invalid Employee List or Employee does not Exist!")
-    values = LIST[name]
+
+
 
     #Frames to hold widgets
     details_frame = tb.Frame(new_window, width=0)
