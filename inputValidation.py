@@ -51,6 +51,11 @@ def checkStatus(data):
         return False
     return True
 
+
+#Method to ensure that user is not supplying duplicate employee ID
+def checkID(data):
+    pass
+
 #Calculates employees age and returns it
 def calculate_age(birthdate):
     today = datetime.today()
