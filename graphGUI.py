@@ -22,10 +22,8 @@ class graphGUI():
         self.refreshButton.place(x=680, y=460)
 
     def createGraphs(self,employees):
-        self.create_gender_piechart([employeeStatsRef.maleCount, employeeStatsRef.femaleCount], ['M','F'])
-        self.create_donut_chart(employeeStatsRef)
-        self.create_lineChart(employees)
-        self.create_histogram(employees)
+        #Close all graphs to ensure no memory leakage
+        plt.close('all')
 
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
