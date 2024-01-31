@@ -7,6 +7,10 @@ from inputValidation import *
 
 #Save Data
 def save(new_window,entryList,guiInstance):
+    #Input Validate
+    if not checkEntries(entryList):
+        return
+
     #Convert entry to the entries text from v.get()
     for k,v in entryList.items():
         entryList[k] = v.get()
