@@ -1,7 +1,7 @@
 from Modules import *
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from employeeStats import get_gender_counts,get_employment_type_counts,get_all_salaries
+from employeeStats import get_sex_counts,get_employment_type_counts,get_all_salaries
 from manageFile import getEmployeeList
 
 class graphGUI():
@@ -25,8 +25,8 @@ class graphGUI():
         #Close all graphs to ensure no memory leakage
         plt.close('all')
         self.refreshButton.configure(state="normal")
-        gender = get_gender_counts()
-        self.create_pie_chart([gender.get('M', 0), gender.get('F', 0)], ['M', 'F'])
+        sex = get_sex_counts()
+        self.create_pie_chart([sex.get('M', 0), sex.get('F', 0)], ['M', 'F'])
         self.create_lineChart(employees)
 
     #Employment Status Breakdown Chart
