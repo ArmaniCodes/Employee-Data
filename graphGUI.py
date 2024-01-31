@@ -25,9 +25,12 @@ class graphGUI():
         #Close all graphs to ensure no memory leakage
         plt.close('all')
         self.refreshButton.configure(state="normal")
+
         sex = get_sex_counts()
+
         self.create_gender_piechart([sex.get('M', 0), sex.get('F', 0)], ['M', 'F'])
         self.create_lineChart(employees)
+        self.create_histogram(employees)
 
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
