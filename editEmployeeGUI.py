@@ -7,10 +7,7 @@ def save(new_window,entryList):
     if not checkBirthDate(entryList) or not checkSalary(entryList):
         return False
 
-    fname = entryList["FirstName"]
-    lname = entryList["LastName"]
-    del entryList["FirstName"]
-    del entryList["LastName"]
+
     for k, v in entryList.items():
         entryList[k] = v.get()
 
