@@ -2,6 +2,7 @@ from modules import *
 from manageFile import search_employee_by_id, get_employee_data
 from datetime import datetime
 
+#When one of the check Methods returns false all will return false and result in data not being saved
 
 def checkBirthDate(data):
     #We try to retrieve the DOB from the user input
@@ -35,7 +36,11 @@ def checkSalary(data):
     return True
 
 def checkSex(data):
-    pass
+    gender = data["Gender"].get()
+    if (gender != "M" and gender != "F"):
+        #Prevent User from saving by returning False
+        return False
+    return True
 
 
 #Calculates employees age and returns it
