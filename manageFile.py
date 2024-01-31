@@ -3,7 +3,36 @@ from Modules import sqlite3
 
 
 def update_employee_data(employee_name,new_data):
-    pass
+    # Connect to SQLite database
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
+
+    rows_modified = cur.execute('''
+            UPDATE employees
+            SET 
+                date_of_birth = ?,
+                gender = ?,
+                race = ?,
+                email = ?,
+                phone = ?,
+                address = ?,
+                employee_id = ?,
+                job_title = ?,
+                department = ?,
+                manager_leader = ?,
+                status = ?,
+                salary = ?,
+                time_and_attendance = ?,
+                certifications_skills = ?,
+                training_programs = ?,
+                extra_information = ?,
+                age = ?
+            WHERE name = ?
+        ''', (*(formatData(new_data, employee_name)), employee_name)).rowcount
+        #Unpack the returned tuple from formatData and update accordingly in the db
+    conn.commit()
+    conn.close()
+
 
 def get_employee_data(employee_name):
     #Connect to local db
