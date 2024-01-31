@@ -32,3 +32,7 @@ def get_employment_type_counts():
                ''')
     employment_type_counts = dict(cur.fetchall())
     return employment_type_counts
+
+
+def get_all_salaries():
+    pass
