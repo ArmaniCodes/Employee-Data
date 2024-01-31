@@ -1,4 +1,6 @@
 from Modules import *
+from manageFile import get_employee_data, update_employee_data,delete_employee_by_id
+from inputValidation import calculate_age, checkBirthDate, checkSalary
 
 def save(new_window,entryList,name):
     fname = entryList["FirstName"]

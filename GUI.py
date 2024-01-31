@@ -135,6 +135,8 @@ class EmployeeGui:
         if employees:
             self.clearEmployees() #Clear Previous Employees
             self.buttonList.clear()
+
+            #employees is stored as a list of tuples, i is a tuple, i[1] indexs the name, to see what the other indexs are stored as, check manageFile format
             for i in employees:
                 b = tb.Button(self.inner_frame, width=20, text=i[1], style="Custom.TButton")
                 b.configure(command=lambda t=i[1], button=b: employeeInfoWdw(self.root, t, self.instance))
