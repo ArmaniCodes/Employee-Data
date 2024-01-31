@@ -142,7 +142,7 @@ def employeeInfoWdw(root,name,guiInstance):
     ID_entry = tb.Entry(details_frame, width=17)
     ID_entry.insert(0, employee_data[8])
     ID_entry.grid(row=10, column=1, sticky="w", pady=(0, 5))
-    entryList["Employee ID"] = ID_entry
+    entryList["Employee ID"] = employee_data[8]
 
     #Employment Details Label
     tb.Label(details_frame2, text="Employment Details", bootstyle="success", font=("Helvetica", 11)).grid(row=0,
