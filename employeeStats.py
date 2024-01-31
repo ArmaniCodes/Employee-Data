@@ -15,7 +15,7 @@ def get_sex_counts():
     #Retrieve as dictionary
     sex_counts = dict(cur.fetchall())
 
-    onn.close()
+    conn.close()
 
     return sex_counts
 
