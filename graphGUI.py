@@ -9,6 +9,10 @@ class graphGUI():
         self.root = root
         self.createGraphFrame(self.root)
 
+    #Recreate graphs
+    def refreshGraphs(self):
+        self.createGraphs(getEmployeeList())
+
     def createGraphFrame(self, root):
         self.graphFrame = tb.Frame(root, style="My.TFrame", width=750, height=430)
         self.graphFrame.place(x=380, y=20)
