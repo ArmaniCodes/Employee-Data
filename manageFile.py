@@ -2,7 +2,15 @@ from Modules import sqlite3
 
 
 def getEmployeeList():
-    pass
+    #Connect to DB
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
+
+    #Retrieve full employee list
+    cur.execute('''
+              SELECT * FROM employees
+          ''')
+    results = cur.fetchall()
 
 def update_employee_data(employee_name,new_data):
     # Connect to SQLite database
