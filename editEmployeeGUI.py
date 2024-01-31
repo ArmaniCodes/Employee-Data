@@ -21,7 +21,8 @@ def save(new_window,entryList):
     newList[name]["Employee ID"] = emID
     newList[name]["Salary"] = int(newList[name]["Salary"])
 
-    saveToFile(newList)
+    #Store info and destroy window
+    update_employee_data(name,newList)
     new_window.destroy()
 
     # We delete users by their employee ID not their name, this is to ensure we don't delete the wrong person
