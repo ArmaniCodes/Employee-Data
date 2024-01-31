@@ -11,6 +11,10 @@ def delete_employee_by_id(employee_id):
             DELETE FROM employees WHERE employee_id = ?
         ''', (employee_id,))
 
+    #commit the changes and close the connection
+    conn.commit()
+    conn.close()
+
 def search_employee_by_id(employee_id):
     #Connect to DB
     conn = sqlite3.connect('employee_data.db')
