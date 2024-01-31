@@ -158,4 +158,5 @@ class EmployeeGui:
             b.configure(command=lambda t=i[1], button=b: employeeInfoWdw(self.root, t, self.instance))
             self.buttonList[i[1]] = b
             b.pack(fill="x")
+        self.employeeCount = len(employees)
         self.updateScrollingFrame()
