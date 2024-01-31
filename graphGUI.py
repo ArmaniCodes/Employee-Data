@@ -40,9 +40,7 @@ class graphGUI():
         total = sum(statusDICT.values())
 
         #Format values
-        values = list(
-            ({category: (value / total) * 100 for category, value in employeeStatsRef.employmentType.items()}).values())
-        labels = employeeStatsRef.employmentType.keys()
+        values =  list ( ({category: (value / total) * 100 for category, value in statusDICT.items()}).values())
 
         #Graph theme
         colors = ['lightblue', 'lightcoral', 'pink', 'red']
