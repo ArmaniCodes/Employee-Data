@@ -111,28 +111,28 @@ def employeeInfoWdw(root,name,guiInstance):
     # Create labels and entry widgets for employee Email
     tb.Label(details_frame, text="Employee Email:").grid(row=7, column=0, sticky="e", pady=(0, 5))
     email_entry = tb.Entry(details_frame, width=17)
-    email_entry.insert(0, values["Email"])
+    email_entry.insert(0,employee_data[5])
     email_entry.grid(row=7, column=1, sticky="w", pady=(0, 5))
     entryList["Email"] = email_entry
 
     # Create labels and entry widgets for employee Phone
     tb.Label(details_frame, text="Employee Phone:").grid(row=8, column=0, sticky="e", pady=(0, 5))
     phone_entry = tb.Entry(details_frame, width=17)
-    phone_entry.insert(0, values["Phone"])
+    phone_entry.insert(0, employee_data[6])
     phone_entry.grid(row=8, column=1, sticky="w", pady=(0, 5))
     entryList["Phone"] = phone_entry
 
     # Create labels and entry widgets for employee Address
     tb.Label(details_frame, text="Employee Address:").grid(row=9, column=0, sticky="e", pady=(0, 5))
     address_entry = tb.Entry(details_frame, width=17)
-    address_entry.insert(0, values["Address"])
+    address_entry.insert(0, employee_data[7])
     address_entry.grid(row=9, column=1, sticky="w", pady=(0, 5))
     entryList["Address"] = address_entry
 
     # Create labels and entry widgets for employee ID
     tb.Label(details_frame, text="Employee ID:").grid(row=10, column=0, sticky="e", pady=(0, 5))
     ID_entry = tb.Entry(details_frame, width=17)
-    ID_entry.insert(0, values["Employee ID"])
+    ID_entry.insert(0, employee_data[8])
     ID_entry.grid(row=10, column=1, sticky="w", pady=(0, 5))
     entryList["Employee ID"] = ID_entry
 
@@ -143,35 +143,35 @@ def employeeInfoWdw(root,name,guiInstance):
     # Create labels and entry widgets for employee Job Title
     tb.Label(details_frame2, text="Job Title:").grid(row=1, column=3, pady=(0, 5), sticky="e")
     job_entry = tb.Entry(details_frame2, width=15)
-    job_entry.insert(0, values["Job Title"])
+    job_entry.insert(0,  employee_data[9])
     job_entry.grid(row=1, column=4, sticky="w", pady=(0, 5))
     entryList["Job Title"] = job_entry
 
     # Create labels and entry widgets for employee Job Department
     tb.Label(details_frame2, text="Department:").grid(row=2, column=3, pady=(0, 5), sticky="e")
     department_entry = tb.Entry(details_frame2, width=15)
-    department_entry.insert(0, values["Department"])
+    department_entry.insert(0, employee_data[10])
     department_entry.grid(row=2, column=4, sticky="w", pady=(0, 5))
     entryList["Department"] = department_entry
 
     # Create labels and entry widgets for employee Superior
     tb.Label(details_frame2, text="Manager/Leader:").grid(row=3, column=3, pady=(0, 5), sticky="e")
     manager_entry = tb.Entry(details_frame2, width=15)
-    manager_entry.insert(0, values["Manager/Leader"])
+    manager_entry.insert(0, employee_data[11])
     manager_entry.grid(row=3, column=4, sticky="w", pady=(0, 5))
     entryList["Manager/Leader"] = manager_entry
 
     # Create labels and entry widgets for employee Job Status
     tb.Label(details_frame2, text="Employment Status:").grid(row=4, column=3, pady=(0, 5), sticky="e")
     status_entry = tb.Entry(details_frame2, width=15)
-    status_entry.insert(0, values["Status"])
+    status_entry.insert(0, employee_data[12])
     status_entry.grid(row=4, column=4, sticky="w", pady=(0, 5))
     entryList["Status"] = status_entry
 
     # Create labels and entry widgets for employee Salary
     tb.Label(details_frame2, text="Salary:").grid(row=5, column=3, pady=(0, 5), sticky="e")
     salary_entry = tb.Entry(details_frame2, width=15)
-    salary_entry.insert(0, values["Salary"])
+    salary_entry.insert(0,employee_data[13])
     salary_entry.grid(row=5, column=4, sticky="w", pady=(0, 5))
     entryList["Salary"] = salary_entry
 
@@ -183,27 +183,27 @@ def employeeInfoWdw(root,name,guiInstance):
     # Create labels and entry widgets for employee Attendance
     tb.Label(details_frame2, text="Time and Attendance:").grid(row=7, column=3, pady=(0, 5), sticky="e")
     time_entry = tb.Entry(details_frame2, width=15)
-    time_entry.insert(0, values["Time and Attendance"])
+    time_entry.insert(0, employee_data[14])
     time_entry.grid(row=7, column=4, sticky="w", pady=(0, 5))
     entryList["Time and Attendance"] = time_entry
 
     # Create labels and entry widgets for employee Skills
     tb.Label(details_frame2, text="Certifications and Skills:").grid(row=8, column=3, pady=(0, 5), sticky="e")
     certs_entry = tb.Entry(details_frame2, width=15)
-    certs_entry.insert(0, values["Certifications and Skills"])
+    certs_entry.insert(0, employee_data[15])
     certs_entry.grid(row=8, column=4, sticky="w", pady=(0, 5))
     entryList["Certifications and Skills"] = certs_entry
 
     # Create labels and entry widgets for employee Programs
     tb.Label(details_frame2, text="Training/Programs:").grid(row=9, column=3, pady=(0, 5), sticky="e")
     training = tb.Entry(details_frame2, width=15)
-    training.insert(0, values["Training/Programs"])
+    training.insert(0, employee_data[16])
     training.grid(row=9, column=4, sticky="w", pady=(0, 5))
     entryList["Training/Programs"] = training
 
     # Create labels and entry widgets for employee extra Info
     tb.Label(details_frame2, text="Any Extra Information:").grid(row=10, column=3, pady=(0, 5), sticky="e")
     extra_entry = tb.Entry(details_frame2, width=15)
-    extra_entry.insert(0, values["Extra Information"])
+    extra_entry.insert(0, employee_data[17])
     extra_entry.grid(row=10, column=4, sticky="w", pady=(0, 5))
     entryList["Extra Information"] = extra_entry
