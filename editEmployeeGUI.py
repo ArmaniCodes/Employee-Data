@@ -2,7 +2,7 @@ from Modules import *
 from manageFile import get_employee_data, update_employee_data,delete_employee_by_id
 from inputValidation import calculate_age, checkBirthDate, checkSalary
 
-def save(new_window,entryList,name):
+def save(new_window,entryList):
     fname = entryList["FirstName"]
     lname = entryList["LastName"]
     del entryList["FirstName"]
@@ -37,7 +37,7 @@ def employeeInfoWdw(root,name,guiInstance):
     label = tb.Label(new_window, text=name + "'s info, override if necessary ", font=("Helvetica", 13)).pack(pady=5)
 
     #Save Button
-    close_button = tb.Button(new_window, text="Save/Close", command=lambda: save(new_window, entryList,name),
+    close_button = tb.Button(new_window, text="Save/Close", command=lambda: save(new_window, entryList),
                              bootstyle="success,outline")
     close_button.pack(side="bottom")
 
