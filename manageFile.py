@@ -77,7 +77,7 @@ def update_employee_data(employee_name,new_data):
             UPDATE employees
             SET 
                 date_of_birth = ?,
-                gender = ?,
+                sex = ?,
                 race = ?,
                 email = ?,
                 phone = ?,
@@ -117,7 +117,7 @@ def get_employee_data(employee_name):
 def formatData(data,name):
     #Order to enter the db
     keys_order = [
-        'Date Of Birth', 'Gender', 'Race', 'Email', 'Phone', 'Address',
+        'Date Of Birth', 'Sex', 'Race', 'Email', 'Phone', 'Address',
         'Employee ID', 'Job Title', 'Department', 'Manager/Leader', 'Status',
         'Salary', 'Time and Attendance', 'Certifications and Skills', 'Training/Programs',
         'Extra Information', 'Age'
@@ -137,7 +137,7 @@ def addEmployee(data,name):
                id INTEGER PRIMARY KEY,
                name TEXT,
                date_of_birth TEXT,
-               gender TEXT,
+               sex TEXT,
                race TEXT,
                email TEXT,
                phone TEXT,
@@ -159,7 +159,7 @@ def addEmployee(data,name):
     #Add employee to db
     cur.execute('''
             INSERT INTO employees (
-                name, date_of_birth, gender, race, email, phone, address,
+                name, date_of_birth, sex, race, email, phone, address,
                 employee_id, job_title, department, manager_leader, status, salary,
                 time_and_attendance, certifications_skills, training_programs,
                 extra_information, age

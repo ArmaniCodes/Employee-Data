@@ -1,7 +1,5 @@
 from Modules import *
-from manageFile import checkIfEmployeeExist
 from datetime import datetime
-from manageFile import saveToFile
 
 def calculate_age(birthdate):
     today = datetime.today()
@@ -91,6 +89,7 @@ def newEmployeeWdw(root,guiInstance):
     # Create label and entry widget for employee DOB, then store in entryList
     tb.Label(details_frame, text="Employee Date of Birth:").grid(row=3, column=0, sticky="e", pady=(0, 5))
     dob_entry = tb.Entry(details_frame, width=15)
+    dob_entry.insert(0,"mm/dd/yyyy")
     dob_entry.grid(row=3, column=1, sticky="w", pady=(0, 5))
     entryList["Date Of Birth"] = dob_entry
 
