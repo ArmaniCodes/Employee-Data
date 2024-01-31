@@ -88,12 +88,13 @@ def employeeInfoWdw(root,name,guiInstance):
     dob_entry.grid(row=3, column=1, sticky="w", pady=(0, 5))
     entryList["Date Of Birth"] = dob_entry
 
-    # Create labels and entry widgets for employee Sex
+    # Create labels and combo widgets for employee Sex
+    # We use combobox instead of entry to ensure input cannot be invalid
     tb.Label(details_frame, text="Employee Sex:").grid(row=4, column=0, sticky="e", pady=(0, 5))
-    gender_entry = tb.Entry(details_frame, width=15)
-    gender_entry.insert(0, values["Sex"])
-    gender_entry.grid(row=4, column=1, sticky="w", pady=(0, 5))
-    entryList["Sex"] = gender_entry
+    sex_combo = tb.Combobox(details_frame, values=["M", "F"], width=13, state="readonly")
+    sex_combo.set(employee_data[3])  # Set the initial text displayed in the dropdown to employee sex
+    sex_combo.grid(row=4, column=1, sticky="w", pady=(0, 5))
+    entryList["Sex"] = sex_combo
 
     # Create labels and entry widgets for employee Race
     tb.Label(details_frame, text="Employee Race:").grid(row=5, column=0, sticky="e", pady=(0, 5))
