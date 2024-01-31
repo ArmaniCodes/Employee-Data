@@ -18,3 +18,6 @@ def get_sex_counts():
     onn.close()
 
     return gender_counts
+
+def get_employment_type_counts():
+    pass
