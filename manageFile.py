@@ -12,6 +12,10 @@ def getEmployeeList():
           ''')
     results = cur.fetchall()
 
+    #Close connection and return
+    conn.close()
+    return results
+
 def update_employee_data(employee_name,new_data):
     # Connect to SQLite database
     conn = sqlite3.connect('employee_data.db')
