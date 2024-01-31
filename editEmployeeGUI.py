@@ -137,7 +137,8 @@ def employeeInfoWdw(root,name,guiInstance):
     address_entry.grid(row=9, column=1, sticky="w", pady=(0, 5))
     entryList["Address"] = address_entry
 
-    # Create labels and entry widgets for employee ID
+    # Create label widgets for employee ID
+    # Since employee ID cannot be changed we will not be using an entry!
     tb.Label(details_frame, text="Employee ID:").grid(row=10, column=0, sticky="e", pady=(0, 5))
     ID_entry = tb.Label(details_frame, width=17, text=employee_data[8])
     ID_entry.grid(row=10, column=1, sticky="w", pady=(0, 5))
