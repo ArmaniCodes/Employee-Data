@@ -37,7 +37,7 @@ class graphGUI():
         chart_frame = tk.Frame(self.root, width=0, height=0)
         chart_frame.place(x=395, y=250)
         #Total of status stats
-        total = sum(employeeStatsRef.employmentType.values())
+        total = sum(statusDICT.values())
 
         #Format values
         values = list(
@@ -46,7 +46,7 @@ class graphGUI():
 
         #Graph theme
         colors = ['lightblue', 'lightcoral', 'pink', 'red']
-        textprops = {'fontsize': 7, 'color': 'white', 'weight': 'bold'}
+        textprops = {'fontsize': 6, 'color': 'white', 'weight': 'bold'}
 
         #Graph creation
         fig, ax = plt.subplots()
