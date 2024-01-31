@@ -42,6 +42,10 @@ def checkSex(data):
         return False
     return True
 
+#Validates status
+def checkStatus(data):
+    pass
+
 
 #Calculates employees age and returns it
 def calculate_age(birthdate):
@@ -49,3 +53,4 @@ def calculate_age(birthdate):
     birthdate = datetime.strptime(birthdate, '%m/%d/%Y')
     age = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
     return age
+
