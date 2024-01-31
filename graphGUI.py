@@ -24,6 +24,7 @@ class graphGUI():
     def createGraphs(self,employees):
         #Close all graphs to ensure no memory leakage
         plt.close('all')
+        self.refreshButton.configure(state="normal")
 
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
