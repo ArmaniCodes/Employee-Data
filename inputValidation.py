@@ -34,6 +34,10 @@ def checkSalary(data):
     #else return True
     return True
 
+def checkSex(data):
+    pass
+
+
 #Calculates employees age and returns it
 def calculate_age(birthdate):
     today = datetime.today()
