@@ -10,6 +10,13 @@ def get_all_employees_sorted_sql(sort_by_column):
     if sort_by_column not in allowed_columns:
         raise ValueError("Invalid column for sorting.")
 
+    # execute query
+    query = f'''
+                SELECT * FROM employees
+                ORDER BY {sort_by_column}
+            '''
+    cur.execute(query)
+
 def delete_employee_by_id(employee_id):
     # Connect to SQLite database
     conn = sqlite3.connect('employee_data.db')
