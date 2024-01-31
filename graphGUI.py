@@ -26,7 +26,7 @@ class graphGUI():
         plt.close('all')
         self.refreshButton.configure(state="normal")
         gender = get_gender_counts()
-
+        self.create_pie_chart([gender.get('M', 0), gender.get('F', 0)], ['M', 'F'])
 
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
