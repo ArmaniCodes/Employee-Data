@@ -30,3 +30,12 @@ def addEmployee(data,name):
                age INTEGER
            )
        ''')
+
+    cur.execute('''
+            INSERT INTO employees (
+                name, date_of_birth, gender, race, email, phone, address,
+                employee_id, job_title, department, manager_leader, status, salary,
+                time_and_attendance, certifications_skills, training_programs,
+                extra_information, age
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)
+        ''', (name,) + formatData(data, name))
