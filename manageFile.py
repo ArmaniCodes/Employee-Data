@@ -11,6 +11,7 @@ def formatData(data,name):
         'Extra Information', 'Age'
     ]
 
+    employee_values = tuple(data[name][key] for key in keys_order)
 
 def addEmployee(data,name):
     #Connection to local db
