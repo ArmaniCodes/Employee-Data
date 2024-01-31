@@ -17,6 +17,9 @@ class graphGUI():
         self.graphFrame = tb.Frame(root, style="My.TFrame", width=750, height=430)
         self.graphFrame.place(x=380, y=20)
 
+        self.refreshButton = tb.Button(root, bootstyle="success", text="Update Graphs", state="disabled",
+                                       command=self.refreshGraphs)
+        self.refreshButton.place(x=680, y=460)
 
     def createGraphs(self,employeeStatsRef,employees):
         self.create_gender_piechart([employeeStatsRef.maleCount, employeeStatsRef.femaleCount], ['M','F'])
