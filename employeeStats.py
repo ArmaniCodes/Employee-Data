@@ -1,4 +1,4 @@
-import sqlite3
+from Modules import sqlite3
 
 
 def get_sex_counts():
@@ -7,17 +7,19 @@ def get_sex_counts():
     cur = conn.cursor()
 
     cur.execute('''
-           SELECT gender, COUNT(*) as count
+           SELECT sex, COUNT(*) as count
            FROM employees
-           GROUP BY gender
+           GROUP BY sex
        ''')
 
     #Retrieve as dictionary
-    gender_counts = dict(cur.fetchall())
+    sex_counts = dict(cur.fetchall())
 
     onn.close()
 
-    return gender_counts
+    return sex_counts
 
 def get_employment_type_counts():
-    pass
+    #Connect to db
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
