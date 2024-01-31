@@ -7,6 +7,9 @@ def get_employee_data(employee_name):
     conn = sqlite3.connect('employee_data.db')
     cur = conn.cursor()
 
+    cur.execute('''
+                SELECT * FROM employees WHERE name = ?
+            ''', (employee_name,))
 
 #We need to format before adding to DB because the information is out of order
 def formatData(data,name):
