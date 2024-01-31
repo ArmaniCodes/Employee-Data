@@ -35,4 +35,15 @@ def get_employment_type_counts():
 
 
 def get_all_salaries():
-    pass
+    #Connect to db
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
+
+    cur.execute('SELECT salary FROM employees')
+
+    salaries = [row[0] for row in cur.fetchall()]
+
+    # Close the connection
+    conn.close()
+
+    return salaries
