@@ -44,8 +44,12 @@ def checkSex(data):
 
 #Validates status
 def checkStatus(data):
-    pass
-
+    #Get text from the combobox
+    status = data["Status"].get()
+    if  (status != "Full Time" and status != "Part Time" and status != "Contract" and status != "Internship"):
+        #Return false prevent user from saving
+        return False
+    return True
 
 #Calculates employees age and returns it
 def calculate_age(birthdate):
