@@ -162,11 +162,13 @@ def employeeInfoWdw(root,name,guiInstance):
     entryList["Manager/Leader"] = manager_entry
 
     # Create labels and entry widgets for employee Job Status
+    # We use combobox instead of entry because it's easier to inputvalidate since we will be needing it for stats for graphing
     tb.Label(details_frame2, text="Employment Status:").grid(row=4, column=3, pady=(0, 5), sticky="e")
-    status_entry = tb.Entry(details_frame2, width=15)
-    status_entry.insert(0, employee_data[12])
-    status_entry.grid(row=4, column=4, sticky="w", pady=(0, 5))
-    entryList["Status"] = status_entry
+    status_combo = tb.Combobox(details_frame2, values=["Full Time", "Part Time", "Internship", "Contract"], width=13,
+                               state="readonly")
+    status_combo.set(employee_data[12])  # Set the initial text displayed in the dropdown
+    status_combo.grid(row=4, column=4, sticky="w", pady=(0, 5))
+    entryList["Status"] = status_combo
 
     # Create labels and entry widgets for employee Salary
     tb.Label(details_frame2, text="Salary:").grid(row=5, column=3, pady=(0, 5), sticky="e")
