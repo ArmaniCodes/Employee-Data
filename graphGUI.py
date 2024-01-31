@@ -31,9 +31,9 @@ class graphGUI():
         self.create_gender_piechart([sex.get('M', 0), sex.get('F', 0)], ['M', 'F'])
         self.create_lineChart(employees)
         self.create_histogram(employees)
-
+        self.create_donut_chart(get_employment_type_counts())
     #Employment Status Breakdown Chart
-    def create_donut_chart(self,employeeStatsRef):
+    def create_donut_chart(self,statusDICT):
         chart_frame = tk.Frame(self.root, width=0, height=0)
         chart_frame.place(x=395, y=250)
         #Total of status stats
