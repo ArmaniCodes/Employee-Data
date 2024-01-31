@@ -7,6 +7,11 @@ def save(new_window,entryList):
     if not checkBirthDate(entryList) or not checkSalary(entryList):
         return False
 
+    #Since these are just text and not instances of entries we must remove them before the below for loop runs
+    name = entryList["Name"]
+    emID = entryList["Employee ID"]
+    del entryList["Name"]
+    del entryList["Employee ID"]
 
     for k, v in entryList.items():
         entryList[k] = v.get()
