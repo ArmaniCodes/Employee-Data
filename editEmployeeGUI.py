@@ -17,9 +17,9 @@ def save(new_window,entryList):
     saveToFile(newList)
     new_window.destroy()
 
-
-def delEmployeeHelper(name,rootwindow,guiInstance,buttonInstance):
-    deleteEmployee(name)
+    # We delete users by their employee ID not their name, this is to ensure we don't delete the wrong person
+def delEmployeeHelper(empID,rootwindow,guiInstance,buttonInstance):
+    delete_employee_by_id(empID)
     guiInstance.removeEmployeeFromFrame(buttonInstance)
     rootwindow.destroy()
 
@@ -45,9 +45,9 @@ def employeeInfoWdw(root,name,guiInstance):
                              bootstyle="success,outline")
     close_button.pack(side="bottom")
 
-    #Delete Button
+    #Delete Button employee_data[8] is the employee ID to see other indexs check managefile key order
     delete_button = tb.Button(new_window, text="DELETE",
-                              command=lambda: delEmployeeHelper(name, new_window, guiInstance, buttonInstance),
+                              command=lambda: delEmployeeHelper(employee_data[8], new_window, guiInstance, buttonInstance),
                               bootstyle="danger,outline")
     delete_button.place(relx=0, rely=1, anchor="sw")
 
