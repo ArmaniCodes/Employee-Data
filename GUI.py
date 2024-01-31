@@ -1,5 +1,5 @@
 from Modules import *
-from manageFile import getEmployeeList
+from manageFile import getEmployeeList, createTable
 from newEmployeeGUI import newEmployeeWdw
 from editEmployeeGUI import employeeInfoWdw
 from sortEmployees import searchForEmployee, sortByName,sortBySalary,sortByID
@@ -31,6 +31,7 @@ class EmployeeGui:
         #Store graphGUI instance
         self.graph_GUI = graphGUI(self.root)
 
+        createTable()
         self.root.mainloop()
 
     def createGui(self):
