@@ -26,7 +26,7 @@ class graphGUI():
         plt.close('all')
         self.refreshButton.configure(state="normal")
         sex = get_sex_counts()
-        self.create_pie_chart([sex.get('M', 0), sex.get('F', 0)], ['M', 'F'])
+        self.create_gender_piechart([sex.get('M', 0), sex.get('F', 0)], ['M', 'F'])
         self.create_lineChart(employees)
 
     #Employment Status Breakdown Chart
