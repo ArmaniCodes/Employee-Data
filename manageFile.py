@@ -1,7 +1,9 @@
 from Modules import sqlite3
 
 def get_all_employees_sorted_sql(sort_by_column):
-    pass
+    #connect to the SQLite database
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
 
 def delete_employee_by_id(employee_id):
     # Connect to SQLite database
