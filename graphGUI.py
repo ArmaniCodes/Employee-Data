@@ -21,7 +21,7 @@ class graphGUI():
                                        command=self.refreshGraphs)
         self.refreshButton.place(x=680, y=460)
 
-    def createGraphs(self,employeeStatsRef,employees):
+    def createGraphs(self,employees):
         self.create_gender_piechart([employeeStatsRef.maleCount, employeeStatsRef.femaleCount], ['M','F'])
         self.create_donut_chart(employeeStatsRef)
         self.create_lineChart(employees)
