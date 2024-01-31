@@ -1,5 +1,5 @@
-from editEmployeeGUI import employeeInfoWdw
-from manageFile import get_employee_data, get_all_employees_sorted_sql
+from src.GUIS.editEmployeeGUI import employeeInfoWdw
+from src.ManageEmployees.manageFile import get_employee_data, get_all_employees_sorted_sql
 
 def searchForEmployee(root,guiInstance,name):
     if get_employee_data(name):

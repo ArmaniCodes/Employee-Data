@@ -1,9 +1,9 @@
-from Modules import *
-from manageFile import getEmployeeList, createTable
-from newEmployeeGUI import newEmployeeWdw
-from editEmployeeGUI import employeeInfoWdw
-from sortEmployees import searchForEmployee, sortByName,sortBySalary,sortByID
-from graphGUI import graphGUI
+from src.Modules import *
+from src.ManageEmployees.manageFile import getEmployeeList, createTable
+from src.GUIS.newEmployeeGUI import newEmployeeWdw
+from src.GUIS.editEmployeeGUI import employeeInfoWdw
+from src.ManageEmployees.sortEmployees import searchForEmployee, sortByName,sortBySalary,sortByID
+from src.GUIS.graphGUI import graphGUI
 
 class EmployeeGui:
     def __init__(self):

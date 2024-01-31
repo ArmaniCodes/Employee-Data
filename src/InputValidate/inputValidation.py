@@ -1,5 +1,5 @@
-from Modules import *
-from manageFile import search_employee_by_id, get_employee_data
+from src.Modules import *
+from src.ManageEmployees.manageFile import search_employee_by_id, get_employee_data
 from datetime import datetime
 
 #When one of the check Methods returns false all will return false and result in data not being saved

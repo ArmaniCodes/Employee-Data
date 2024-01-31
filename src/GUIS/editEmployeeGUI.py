@@ -1,6 +1,6 @@
-from Modules import *
-from manageFile import get_employee_data, update_employee_data,delete_employee_by_id
-from inputValidation import calculate_age, checkBirthDate, checkSalary
+from src.Modules import *
+from src.ManageEmployees.manageFile import get_employee_data, update_employee_data,delete_employee_by_id
+from src.InputValidate.inputValidation import calculate_age, checkBirthDate, checkSalary
 
 def save(new_window,entryList):
     #Validate DOB and Salary since user can change and put incorrect format

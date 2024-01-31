@@ -1,6 +1,5 @@
-from Modules import tb
-from manageFile import addEmployee
-from inputValidation import *
+from src.ManageEmployees.manageFile import addEmployee
+from src.InputValidate.inputValidation import *
 
 
 
