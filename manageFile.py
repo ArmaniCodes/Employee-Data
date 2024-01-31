@@ -2,6 +2,9 @@ from Modules import sqlite3
 
 
 
+def update_employee_data(employee_name,new_data):
+    pass
+
 def get_employee_data(employee_name):
     #Connect to local db
     conn = sqlite3.connect('employee_data.db')
