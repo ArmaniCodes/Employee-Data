@@ -39,3 +39,6 @@ def addEmployee(data,name):
                 extra_information, age
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)
         ''', (name,) + formatData(data, name))
+
+    conn.commit()
+    conn.close()
