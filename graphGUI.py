@@ -27,7 +27,7 @@ class graphGUI():
         self.refreshButton.configure(state="normal")
         gender = get_gender_counts()
         self.create_pie_chart([gender.get('M', 0), gender.get('F', 0)], ['M', 'F'])
-
+        self.create_lineChart(employees)
 
     #Employment Status Breakdown Chart
     def create_donut_chart(self,employeeStatsRef):
@@ -100,8 +100,8 @@ class graphGUI():
             for bin_center in age_salaries.keys():
                 bin_start = bin_center - bin_size // 2
                 bin_end = bin_center + bin_size // 2
-                if bin_start <= employee["Age"] < bin_end:
-                    age_salaries[bin_center].append(int(employee["Salary"]))
+                if bin_start <= employee[-1] < bin_end:
+                    age_salaries[bin_center].append(int(employee[-1]))
 
         #Format data
         bins_for_plotting = list(age_salaries.keys())
