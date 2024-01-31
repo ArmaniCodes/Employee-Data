@@ -99,7 +99,7 @@ def employeeInfoWdw(root,name,guiInstance):
     # Create labels and entry widgets for employee Race
     tb.Label(details_frame, text="Employee Race:").grid(row=5, column=0, sticky="e", pady=(0, 5))
     race_entry = tb.Entry(details_frame, width=15)
-    race_entry.insert(0, values["Race"])
+    race_entry.insert(0, employee_data[4])   #employee_data[4] is the race
     race_entry.grid(row=5, column=1, sticky="w", pady=(0, 5))
     entryList["Race"] = race_entry
 
