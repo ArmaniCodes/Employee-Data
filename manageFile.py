@@ -31,6 +31,7 @@ def addEmployee(data,name):
            )
        ''')
 
+    #Add employee to db
     cur.execute('''
             INSERT INTO employees (
                 name, date_of_birth, gender, race, email, phone, address,
@@ -40,5 +41,7 @@ def addEmployee(data,name):
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)
         ''', (name,) + formatData(data, name))
 
+
+    #Close Connection
     conn.commit()
     conn.close()

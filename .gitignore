@@ -5,3 +5,4 @@ pyvenv.cfg
 __pycache__/
 employee_data.json
 share/
+employee_data.db
