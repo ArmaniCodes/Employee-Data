@@ -1,6 +1,9 @@
 from Modules import sqlite3
 
 
+def search_employee_by_id(employee_id):
+    pass
+
 def getEmployeeList():
     #Connect to DB
     conn = sqlite3.connect('employee_data.db')
