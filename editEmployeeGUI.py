@@ -69,12 +69,12 @@ def employeeInfoWdw(root,name,guiInstance):
     #Store full employee name, employee_data[1] is the name
     entryList["Name"] = employee_data[1]
 
+
+    # We don't store first and last name since we won't be modifying it anyway
     # Create labels and entry widgets for employee first Name
     tb.Label(details_frame, text="Employee First Name:").grid(row=1, column=0, sticky="e", pady=(0, 5))
     name_entry = tb.Label(details_frame, width=15, text=name.split()[0])
     name_entry.grid(row=1, column=1, sticky="w", pady=(0, 5))
-
-
     # Create labels and entry widgets for employee last Name
     tb.Label(details_frame, text="Employee Last Name:").grid(row=2, column=0, sticky="e", pady=(0, 5))
     last_name_entry = tb.Label(details_frame, width=15, text=name.split()[1])
@@ -84,7 +84,7 @@ def employeeInfoWdw(root,name,guiInstance):
     # Create labels and entry widgets for employee DOB
     tb.Label(details_frame, text="Employee Date of Birth:").grid(row=3, column=0, sticky="e", pady=(0, 5))
     dob_entry = tb.Entry(details_frame, width=15)
-    dob_entry.insert(0, values["Date Of Birth"])
+    dob_entry.insert(0, employee_data[2])   # employee_data[2] stores the DOB
     dob_entry.grid(row=3, column=1, sticky="w", pady=(0, 5))
     entryList["Date Of Birth"] = dob_entry
 
