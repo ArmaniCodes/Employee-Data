@@ -3,7 +3,10 @@ from Modules import sqlite3
 
 
 def get_employee_data(employee_name):
-    pass
+    #Connect to local db
+    conn = sqlite3.connect('employee_data.db')
+    cur = conn.cursor()
+
 
 #We need to format before adding to DB because the information is out of order
 def formatData(data,name):
