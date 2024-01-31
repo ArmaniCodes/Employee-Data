@@ -1,9 +1,15 @@
 from Modules import sqlite3
 
 
-
+#We need to format before adding to DB because the information is out of order
 def formatData(data,name):
-    pass
+    #Order to enter the db
+    keys_order = [
+        'Date Of Birth', 'Gender', 'Race', 'Email', 'Phone', 'Address',
+        'Employee ID', 'Job Title', 'Department', 'Manager/Leader', 'Status',
+        'Salary', 'Time and Attendance', 'Certifications and Skills', 'Training/Programs',
+        'Extra Information', 'Age'
+    ]
 
 
 def addEmployee(data,name):
