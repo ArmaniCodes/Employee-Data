@@ -1,6 +1,11 @@
 from Modules import sqlite3
 
 
+
+def formatData(data,name):
+    pass
+
+
 def addEmployee(data,name):
     #Connection to local db
     conn = sqlite3.connect('employee_data.db')
