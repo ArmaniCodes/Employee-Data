@@ -26,7 +26,7 @@ def save(new_window,entryList,guiInstance):
 
     #If names are empty we instantly return
     if fname == '' or lname == '':
-        rootWindow.destroy()
+        new_window.destroy()
         return
     #Validate Name
     name =  checkIfPersonExist( (fname + " " + lname), newList["Employee ID"])
