@@ -12,14 +12,15 @@ def save(new_window,entryList):
     emID = entryList["Employee ID"]
     del entryList["Name"]
     del entryList["Employee ID"]
-
     for k, v in entryList.items():
         entryList[k] = v.get()
-
 
     newList = {name : entryList}
     #Recalculate Age incase DOB was ammended
     newList[name]["Age"] = calculate_age(newList[name]["Date Of Birth"])
+    newList[name]["Employee ID"] = emID
+    newList[name]["Salary"] = int(newList[name]["Salary"])
+
     saveToFile(newList)
     new_window.destroy()
 
