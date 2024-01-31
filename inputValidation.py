@@ -36,8 +36,8 @@ def checkSalary(data):
     return True
 
 def checkSex(data):
-    gender = data["Gender"].get()
-    if (gender != "M" and gender != "F"):
+    sex = data["Sex"].get()
+    if (sex != "M" and sex != "F"):
         #Prevent User from saving by returning False
         return False
     return True
