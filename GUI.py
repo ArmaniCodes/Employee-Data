@@ -13,7 +13,6 @@ class EmployeeGui:
         self.root.geometry("1150x500")
         self.root.resizable(False, False)
         self.root.title("Employee Dashboard")
-        self.empstats = EmployeeStatistics()
         self.employeeCount = 0
         self.buttonList = {}
 
