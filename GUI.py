@@ -5,6 +5,7 @@ from editEmployeeGUI import employeeInfoWdw
 from sortEmployees import searchForEmployee, sortByName,sortBySalary,sortByID
 from graphGUI import graphGUI
 from employeeStats import EmployeeStatistics
+
 class EmployeeGui:
     def __init__(self):
         #Dark Theme
@@ -114,6 +115,7 @@ class EmployeeGui:
         self.updateEmployeeLabel(self.employeeCount)
 
     def clearEmployees(self):
+        self.employeeCount = 0
         #Destroying this clears all it's children AKA employees
         self.inner_frame.destroy()
         #Create new frame with no employees
@@ -134,18 +136,18 @@ class EmployeeGui:
             self.clearEmployees() #Clear Previous Employees
             self.buttonList.clear()
             #Set Employee Count to 0 before counting
-            self.employeeCount = 0
+
 
             for i in employees:
-                self.employeeCount+=1
                 b = tb.Button(self.inner_frame, width=20, text=i, style="Custom.TButton")
                 b.configure(command=lambda t=i, button=b: employeeInfoWdw(self.root, t, self.instance))
                 self.buttonList[i] = b
                 b.pack(fill="x")
-                self.empstats.sortStats(employees[i])
+                #self.empstats.sortStats(employees[i])
+            self.employeeCount = len(employees)
             self.updateScrollingFrame()
             self.updateEmployeeLabel(self.employeeCount)
-            self.graph_GUI.createGraphs(self.empstats,employees)
+            #self.graph_GUI.createGraphs(self.empstats,employees)
         else:
             self.clearEmployees()
 
