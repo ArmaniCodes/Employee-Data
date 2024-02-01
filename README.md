@@ -7,6 +7,7 @@ As data is stored locally, it's important to note that this project is not inten
 1. Display and Individual Data Inspection:
     -  View a comprehensive list of all employees.
     -  Inspect individual employee data with ease.
+    -  Able to store and support thousands of employee entries.
 
 2. Data Modification:
     -  Override existing employee data.
