@@ -16,6 +16,9 @@ class EmployeeGui:
         self.employeeCount = 0
         self.buttonList = {}
 
+        #Icon
+        self.root.iconbitmap('windowIcon.ico')
+
         #Store instance of GUI for later Use
         self.instance = self
         self.createGui()
