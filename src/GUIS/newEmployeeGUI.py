@@ -48,6 +48,7 @@ def newEmployeeWdw(root,guiInstance):
     new_window.title("Employee Information")
     new_window.geometry("600x500")
     new_window.resizable(False, False)
+    new_window.iconbitmap('windowIcon.ico')
 
     #Title
     label = tb.Label(new_window, text="Enter your employees info", font=("Helvetica", 13)).pack(pady=5)
